@@ -1,0 +1,273 @@
+@CHARSET "UTF-8";
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+	background:#fff;
+	color:#666;
+	font-size:14px;
+	font-family:"Microsoft YaHei", arial, tahoma;
+	overflow:hidden;
+	position:relative;
+	margin: 0;
+	display: block;
+}
+
+html, body {
+	display:block;
+	background:#f9f9f9;
+	height: 100%;
+	width: 100%;
+	font-family:Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;	
+}
+
+.main
+{
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+* {
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+.header
+{
+	position:fixed;
+	width:100%;
+	top:20px;
+	left:0px;
+	z-index:99;	
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+	background-color:#fff;
+}
+
+.content
+{
+	width:100%;
+	height:100%;
+	margin:0 auto;	
+}
+
+.wrap
+{
+	position:absolute;
+	left: 0;
+	top: 20%;
+	width:100%;
+	text-align: center;
+	z-index: 99;
+}
+
+.slogan {
+	width:50%;
+	height: 300px;
+	display: inline-block;
+	background-size: 600px;
+	background-color:rgba(0, 0, 0, 0.45);
+	margin: auto; /* 自动居中 */
+}
+
+.welc {
+	line-height:200px;
+	font-size:35px;
+	color:#00FFFF;
+	font-family: "Microsoft YaHei";
+	font-weight:bold;
+	text-shadow:yes;
+}
+
+.wish {
+	line-height:40px;
+	font-size:40px;
+	color: #FFA500;
+	font-family: "Times New Roman";
+    font-weight:bold;
+}
+.chooseuser {
+	margin-top:100px;
+	width:100%;
+}
+
+.cu_entry {
+	width:550px;
+	height: 50px;
+	margin-top: 15px;
+	margin-bottom:15px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.student {
+	background-color: #4169E1;
+}
+
+.teacher {
+	
+	margin-left:30%;
+	background-color: #4169E1;
+}
+
+.cu_entry a {
+	display: block;
+	text-decoration: none;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	height: 50px;
+	width:170px;
+	color: #ffffff;
+	line-height: 50px;
+	position: relative;
+	opacity: 1;
+}
+
+.cu_entry a .title {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100; /*层叠属性*/
+	padding-left: 18px;	
+}
+
+.cu_entry a .title i {
+	position:absolute;
+	left:20px;
+	top:8px;
+	background:url();
+	display: block;
+	width:32px;
+	height:32px;
+	background-size: 32px;
+}
+
+.cu_entry a .title .st {
+	top:10px;
+	width:26px;
+	height:26px;
+	background-position:top;
+	background-image:url(/MyProject/images/Student.png);	
+}
+
+.cu_entry a .title .tr {
+	background-image:url(/MyProject/images/Teacher.png);
+}
+
+.cu_entry a:hover {
+	background-color: #00aaee;
+	opacity: 1; /*不透明*/
+}
+
+.backimg
+{
+	bottom:0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.items, .item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.item {
+	background: #fff none no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: none;
+}
+
+.footer
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 98;
+}
+
+/* 以下是球类转动的部分*/
+
+.earth_box
+{
+	/*控制装球盒子的宽度*/
+	width: 50%;
+	padding-top: 50%;
+	
+	z-index:1;
+	
+}
+
+.earth_center /*不能使用.earth_box .earth_center: 因为这样只会是这整个居中而对使用earth_center的不起渲染作用，只选择了这一个DIV而已*/
+{
+	/*使装球的盒子居中，而且盒子div不会随着浏览器的放大而变化*/
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+		
+}
+
+.earth_big
+{
+	transform: rotate(360deg);
+	width: 100%;
+	padding-top: 100%;
+	opacity: 1; /*设置图片的透明度，1表示不透明*/
+}
+
+.earth_small
+{	
+	transform: rotate(-360deg);
+	width: 60%;
+	padding-top: 60%;
+	opacity: 0.8;
+}
+
+.earth /*球类通用*/
+{
+	background-image:url(../images/earth.png);
+	
+	/*下面两句话，是解决问题的关键，决定着球是否围绕着一个圆心转，特别重要，浪费了好多时间*/
+	backgroud-position-x: center;
+	background-position-y: center;
+	background-repeat: no-repeat;	
+	background-size: 100%;
+	
+	animation: earth 18S linear infinite;
+}
+
+@keyframes earth
+{
+	100% {
+	transform: rotate(0);
+	}
+}
