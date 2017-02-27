@@ -108,17 +108,11 @@ html, body {
 	margin-right:auto;
 }
 
-.student {
+.go {
 	background-color: #4169E1;
 }
 
-.teacher {
-	
-	margin-left:30%;
-	background-color: #4169E1;
-}
-
-.cu_entry a {
+.go a {
 	display: block;
 	text-decoration: none;
 	float: left;
@@ -135,7 +129,7 @@ html, body {
 	opacity: 1;
 }
 
-.cu_entry a .title {
+.go a .title {
 	position:absolute;
 	top: 0;
 	left: 0;
@@ -145,7 +139,7 @@ html, body {
 	padding-left: 18px;	
 }
 
-.cu_entry a .title i {
+.go a .title i {
 	position:absolute;
 	left:20px;
 	top:8px;
@@ -156,19 +150,8 @@ html, body {
 	background-size: 32px;
 }
 
-.cu_entry a .title .st {
-	top:10px;
-	width:26px;
-	height:26px;
-	background-position:top;
-	background-image:url(/MyProject/images/Student.png);	
-}
 
-.cu_entry a .title .tr {
-	background-image:url(/MyProject/images/Teacher.png);
-}
-
-.cu_entry a:hover {
+.go a:hover {
 	background-color: #00aaee;
 	opacity: 1; /*不透明*/
 }
