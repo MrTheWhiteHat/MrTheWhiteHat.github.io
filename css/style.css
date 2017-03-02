@@ -88,11 +88,12 @@ html, body {
 }
 
 .wish {
+	top:0;
 	line-height:40px;
 	font-size:40px;
 	color: #FFA500;
 	font-family: "Times New Roman";
-    font-weight:bold;
+    	font-weight:bold;
 }
 .chooseuser {
 	margin-top:100px;
