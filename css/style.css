@@ -61,95 +61,69 @@ html, body {
 
 .wrap
 {
-	position:absolute;
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	left: 0;
-	top: 20%;
-	width:100%;
-	text-align: center;
+	right: 0;
+	margin: auto; /* 自动居中 */
+	width:50%;
+	height: 50%;
+	background-color: rgba(0, 0, 0, 0.45);
 	z-index: 99;
 }
 
-.slogan {
-	width:50%;
-	height: 300px;
-	display: inline-block;
-	background-size: 600px;
-	background-color:rgba(0, 0, 0, 0.45);
-	margin: auto; /* 自动居中 */
-}
-
 .welc {
-	line-height:200px;
-	font-size:35px;
+	
+	padding-top: 6%;
+	font-size:40px;
 	color:#00FFFF;
 	font-family: "Microsoft YaHei";
 	font-weight:bold;
-	text-shadow:yes;
-}
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 
-.wish {
-	line-height:40px;
-	font-size:40px;
-	color: #FFA500;
-	font-family: "Times New Roman";
-    font-weight:bold;
-}
-.chooseuser {
-	margin-top:100px;
-	width:100%;
-}
-
-.cu_entry {
-	width:550px;
-	height: 50px;
-	margin-top: 15px;
-	margin-bottom:15px;
-	margin-left:auto;
-	margin-right:auto;
 }
 
 .go {
 	background-color: #4169E1;
 }
 
-.go a {
-	display: block;
+a {
 	text-decoration: none;
 	float: left;
 	text-align: center;
 	cursor: pointer;
 	border-radius: 8px;
-	font-size: 18px;
+	font-size: 45px;
 	letter-spacing: 2px;
-	height: 50px;
-	width:170px;
+	height: 80px;
+	width:200px;
 	color: #ffffff;
-	line-height: 50px;
-	position: relative;
-	opacity: 1;
+	opacity: 1;	
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
-.go a .title {
+.title {
 	position:absolute;
 	top: 0;
 	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	z-index: 100; /*层叠属性*/
-	padding-left: 18px;	
 }
-
-.go a .title i {
-	position:absolute;
-	left:20px;
-	top:8px;
-	background:url();
-	display: block;
-	width:32px;
-	height:32px;
-	background-size: 32px;
-}
-
 
 .go a:hover {
 	background-color: #00aaee;
@@ -190,9 +164,55 @@ html, body {
 	bottom: 0px;
 	left: 0px;
 	width: 100%;
-	height: 60px;
+	height: 80px;
 	background-color: rgba(0, 0, 0, 0.6);
 	z-index: 98;
+}
+
+.wish {
+	line-height:40px;
+	font-size:40px;
+	color: #FFA500;
+	font-family: "Times New Roman";
+    font-weight:bold;
+}
+
+.line
+{
+	width:50%;
+	height:2px;
+	background-color:white;
+	/*start:使一个div块级区域居中*/
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin: auto;
+	/*end*/
+}
+
+.line_0 {
+	width:100%;
+	height:1px;
+	background-color:white;
+	/*start:使一个div块级区域居中*/
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin: auto;
+	/*end*/
+
+}
+
+.Copyright
+{
+	color:white;
+	font-size: 20px;
+	margin-top: 5px;
+
 }
 
 /* 以下是球类转动的部分*/
