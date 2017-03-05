@@ -125,10 +125,50 @@ a {
 	z-index: 100; /*层叠属性*/
 }
 
-.go a:hover {
-	background-color: #00aaee;
-	opacity: 1; /*不透明*/
+#enter {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 2.3em;
+	/*text-transform: uppercase; // 字符全部转换成大写*/
+	width: 30%;
+	border-radius: 10px;
+	color: white;
+	text-shadow: -6px 6px 6px rgba(0,0,0,1); /*分别对应x y z轴*/
+	border: 8px solid transparent;
+	border-left-color: rgba(0,0,0,0.36);
+	border-bottom-color: rgba(0,0,0,0.36);
+	background: hsla(260, 100%, 50%, 1);
+	cursor: pointer;
+
+	animation: pulse 1s infinite alternate;
+	transition: background 0.4s, border 0.2s, margin 0.2s;
 }
+#enter:hover {
+	background: hsla(220, 100%, 60%, 1);
+	margin-top: 6%;
+
+	animation: none;
+}
+#enter:active {
+	border-bottom-width: 0;
+	border-left-width: 0;
+	margin-top: 8.8%;
+}
+
+@keyframes pulse {
+	0% {
+		margin-top: 0px;
+	}
+	100% {
+		margin-top: 6px; 
+	} 
+}
+
 
 .backimg
 {
