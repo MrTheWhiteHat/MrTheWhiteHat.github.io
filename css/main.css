@@ -1,0 +1,116 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;   /*外边距*/
+	padding: 0px;  /*内边距*/
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+	display: block;
+	overflow: hidden;
+}
+
+.center_gif {
+
+	width: 29.3%;
+	height: 61%;
+	position: absolute;
+	top: -10%;
+	bottom: 0;
+	left: 8.2%;
+	right: 0;
+	margin: auto;
+	background-image: url(../images/shine.gif);
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	border-radius: 2px;
+	z-index: 2;
+}
+
+.bg_img {
+	position: absolute;
+	bottom:0;
+	right: 0;
+	left: 0;
+	top: 0;
+	margin: auto;
+	overflow: hidden;
+	background-image: url(../images/cpu.gif);
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+.list {
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 155px;
+	height: 80%;
+	font-size: 26px;
+	z-index: 99;
+}
+
+.list a {
+		text-decoration: none;
+		color: #fff;
+}
+
+.list dd:hover {
+	text-indent: 20px;
+	background-color: rgba(255, 255, 0, 0.35);
+}
+
+.list dt, .list dd {
+	text-indent: 10px;
+	line-height: 36px;
+	background: rgba(0, 255, 255, 0.6);
+}
+
+.list dt {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+
+	-webkit-transform: translateZ(0.3px);
+	-moz-transform: translateZ(0.3px);
+	-ms-transform: translateZ(0.3px);
+	-o-transform: translateZ(0.3px);
+
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.last_dd {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.catalog {
+
+	/*perspective():定义3d元素距视图的距离，以像素计；
+	  rotateY():定义沿着 Y 轴的 3D 旋转，也就是以垂直的方向（纵轴）为轴心，旋转；
+	*/
+	-webkit-transform: perspective(888px) rotateY(36deg) !important;
+	-moz-transform: perspective(888px) rotateY(36deg) !important;
+	-ms-transform: perspective(888px) rotateY(36deg) !important;
+	-o-transform: perspective(888px) rotateY(36deg) !important;
+	transform: perspective(888px) rotateY(36deg) !important;
+
+	-webkit-transform-origin: 150% 30%;
+	-moz-transform-origin: 150% 30%;
+	-ms-transform-origin: 150% 30%;
+	-o-transform-origin: 150% 30%;
+	transform-origin: 150% 30%;
+
+}
+
