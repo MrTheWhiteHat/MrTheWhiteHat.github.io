@@ -8,44 +8,169 @@
     <meta name="keywords" content="Hack/Hacker, Geek/Geeker, C, C++, C#, Java, Python, PHP, Perl, Ruby, html, css, javascript, Penetration, Windows, Linux, Kali Linux, 黑客, 极客, 网站渗透, 操作系统, 逆向工程, 漏洞查找, 网络安全, 全栈工程师">
     <meta name="description" content="努力学习，渴望成为一名以安全为首要的条件的全栈开发工程师。I'm  learning hard to become a full stack developer who takes safety as the primary condition.">
 
-    <script src=""></script>
+    <script src="./js/jquery.js"></script>
+    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script src="./js/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript"> 
+		window.onload = function() {
+			
+			try {
+				TagCanvas.Start('myCanvas', 'tags', {
+					textColour: '#87CEFA',
+					outlineColour: '#ff00ff',
+					reverse: true,
+					depth: 1,
+					maxSpeed: 0.06,
+					shape: "sphere",
+  					weight: true,
+  					weightMode: "both",
+  					weightFrom: "data-weight",
+  					weightGradient: {
+						
+						0:    '#f00', // red
+						0.33: '#ff0', // yellow
+						0.66: '#0f0', // green
+						1:    '#00f',  // blue
+
+  					},
+  					zoomMin: 0.8,
+  					zoomMax: 1.2,
+  					shuffleTags: true, // 随机排列
+  					shadow: "#0f0", // 每个标签后面的阴影
+  					shadowBlur: 3, //标记阴影模糊量
+  					pulsateTo: 0.2,
+  					pulsateTime: 3,
+  					pinchZoom: true,
+  					textFont: 'Impact,"Arial Black",sans-serif',
+  					outlineColour: 'rgba(0, 0, 0, 0.333)',
+  					outlineMethod: "block"
+
+				});
+			} catch (e) {
+				// something went wrong, hide the canvas container
+				document.getElementById('myCanvasContainer').style.display = 'none';
+			}
+		};
+    </script>
+
 
     <link rel="icon" href="./images/titleicon.png" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" media = "screen"/>
 
 </head>
 <body>
 	<div class = "content" id = "ct">
 		<div class = "left_list" id = "ll">
-			<section class = "section" id = "st">
-				<dl class = "list catalog" id = "l">
-					<dt>目录栏</dt>
-					<dd><a href="#">Hacker</a></dd>
-					<dd><a href="#">Geeker</a></dd>
-					<dd><a href="#">C</a></dd>
-					<dd><a href="#">C++</a></dd>
-					<dd><a href="#">C#</a></dd>
-					<dd><a href="#">Java</a></dd>
-					<dd><a href="#">Python</a></dd>
-					<dd><a href="#">PHP</a></dd>
-					<dd><a href="#">Perl</a></dd>
-					<dd><a href="#">Ruby</a></dd>
-					<dd><a href="#">HTML</a></dd>
-					<dd><a href="#">CSS</a></dd>
-					<dd><a href="#">Jscript</a></dd>
-					<dd><a href="#">Linux</a></dd>
-					<dd><a href="#">Windows</a></dd>
-					<dd class = "last_dd"><a href="#">Else</a></dd>
-				</dl>
+			<section class="section">
+
+			    <dl class="list catalog">
+			        <dt class="list_top">
+			        	<i class="catalog_words">目录栏</i>
+			        	<i class="toggle">收放</i>			      
+			        </dt>
+			        <dd><a href="#">Hacker</a></dd>
+			        <dd><a href="#">Geeker</a></dd>
+			        <dd><a href="#">操作系统</a></dd>
+			        <dd><a href="#">汇编</a></dd>
+			        <dd><a href="main.html">C</a></dd>
+			        <dd><a href="main.html">C++</a></dd>
+			        <dd><a href="#">C#</a></dd>
+			        <dd><a href="#">CSS</a></dd>
+			        <dd><a href="#">HTML</a></dd>
+			    	<dd><a href="#">Javascript</a></dd>
+			        <dd><a href="#">Java</a></dd>
+			        <dd><a href="#">PHP</a></dd>
+			        <dd><a href="#">Perl</a></dd>
+			        <dd><a href="#">Python</a></dd>
+			        <dd><a href="#">Ruby</a></dd>
+			        <dd><a href="#">Linux</a></dd>
+			        <dd><a href="#">其他</a></dd>
+			    </dl>
+			    
 			</section>
 		</div>
-		
-		<div class = "center_gif" id = "cg">			
+				
+		<!--div class = "center_gif" id = "cg">			
+		</div-->
+
+		<div class="tagsCloud" id="tagsCloud">
+			<div id="myCanvasContainer">
+		      <canvas width="360" height="360" id="myCanvas">
+		        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+		      </canvas>
+		    </div>
+		    <div id="tags">
+		      <ul>
+			    <li><a href="#" data-weight = "66" >Hacker</a></li>
+				<li><a href="#" data-weight = "25">Geeker</a></li>
+				<li><a href="#" data-weight = "35">汇编</a></li>
+				<li><a href="#" data-weight = "58">操作系统</a></li>
+				<li><a href="main.html" data-weight = "46">C</a></li>
+				<li><a href="main.html" data-weight = "39">C++</a></li>
+				<li><a href="#" data-weight = "48">CSS</a></li>
+				<li><a href="#" data-weight = "36">HTML</a></li>
+				<li><a href="#" data-weight = "45">Javascript</a></li>
+				<li><a href="#" data-weight = "56">Java</a></li>
+				<li><a href="#" data-weight = "30">PHP</a></li>
+				<li><a href="#" data-weight = "25">Perl</a></li>
+				<li><a href="#" data-weight = "35">Python</a></li>
+				<li><a href="#" data-weight = "28">Ruby</a></li>
+				<li><a href="#" data-weight = "55">Linux</a></li>
+				<li><a href="#" data-weight = "20">其他</a></li>
+		      </ul>
+		    </div>
+		</div>
+	</div>
+
+	<div class="warning">
+	    <div class="message">
+	        <h1>CSS 3D Not Detected :(</h1>
+	        <p>I couldn't detect your browser's CSS 3D capabilities. If I'm wrong, please <a href="https://github.com/soulwire/Makisu/issues" target="_blank">file an issue</a>, otherwise, try a <a href="www.google.com/chrome" target="_blank">sexier browser</a></p>
 		</div>
 	</div>
 	
 	<div class = "footer" id = "ft"></div>
 	
 	<div class = "bg_img" id = "bi"></div>
+
+	<!--js脚本的位置特别重要，有的js需要文档加载完了之后，再加载js,才不会出错。这个3d的菜单就是得先加载完文档才有效果。搞了好久......-->
+	 
+	<!--[if IE 10]> <script src="./js/3d-menu.js"></script> <![endif]-->
+	<!--[if !IE]><!--> <script src="./js/3d-menu.js"></script> <!--<![endif]-->  <!--除IE外都可识别-->
+	
+	<!--script type="text/javascript">
+		// js检查浏览器类型与版本
+		function checkBrowser() {
+			if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/6./i)=="6."){
+					alert("IE 6");
+			}
+			else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7."){
+					alert("IE 7");
+			}
+			else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8."){
+					alert("IE 8");
+			}
+			else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
+					alert("IE 9");
+			}
+
+			else if(navigator.userAgent.indexOf("Opera") != -1) { 
+				alert('Opera'); 
+			} else if(navigator.userAgent.indexOf("MSIE") != -1) { 
+				alert('Internet Explorer');
+			} else if(navigator.userAgent.indexOf("Firefox") != -1) { 
+				alert('Firefox'); 
+			} else if(navigator.userAgent.indexOf("Netscape") != -1) { 
+				alert('Netscape'); 
+			} else if(navigator.userAgent.indexOf("Chrome") != -1) { 
+				alert('Chrome'); 
+			} else if(navigator.userAgent.indexOf("Safari") != -1) {
+				alert('Safari');
+			} else if(navigator.userAgent.indexOf("Edge") != -1) {
+				alert('Edge');
+			}else{ alert('无法识别的浏览器。'); }
+		}
+		checkBrowser();
+	</script-->
 </body>
 </html>
