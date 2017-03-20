@@ -273,3 +273,14 @@ a {
 	border-radius: 18px;
 }
 
+.auto_print {
+
+	width: 680px;
+	height: 480px;
+	position: absolute;
+	top: 0;
+	left: 360px;	
+	margin: auto;
+	z-index: 99;
+}
+
