@@ -539,6 +539,7 @@
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
   z-index: 99;
+  position: fixed;
 }
 
 .butterfly_container {
