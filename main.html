@@ -1,557 +1,572 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-	<title>Personal Blog Of Mr White</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="keywords" content="Hack/Hacker, Geek/Geeker, C, C++, C#, Java, Python, PHP, Perl, Ruby, html, css, javascript, Penetration, Windows, Linux, Kali Linux, 黑客, 极客, 网站渗透, 操作系统, 逆向工程, 漏洞查找, 网络安全, 全栈工程师">
-    <meta name="description" content="努力学习，渴望成为一名以安全为首要的条件的全栈开发工程师。I'm  learning hard to become a full stack developer who takes safety as the primary condition.">
+<html xmlns:wb="http://open.weibo.com/wb">
+	<head>
+		<title>Personal Blog Of Mr White</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="renderer" content="webkit">
+	    <meta name="keywords" content="Hack/Hacker, Geek/Geeker, C, C++, C#, Java, Python, PHP, Perl, Ruby, html, css, javascript, Penetration, Windows, Linux, Kali Linux, 黑客, 极客, 网站渗透, 操作系统, 逆向工程, 漏洞查找, 网络安全, 全栈工程师">
+	    <meta name="description" content="努力学习，渴望成为一名以安全为首要的条件的全栈开发工程师。I'm  learning hard to become a full stack developer who takes safety as the primary condition.">
 
-    <meta property="wb:webmaster" content="6ea07d84e47c2cce" />  <!--新浪微博的分享接入AppKey-->
+	    <meta property="wb:webmaster" content="6ea07d84e47c2cce" />  <!--新浪微博的分享接入AppKey-->
 
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/main_style.css" media="screen" type="text/css" />
-    <link rel="stylesheet" href="css/style_butterflies.css" media="screen" type="text/css" />
-    <link rel="icon" href="./images/titleicon.png" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="./css/main.css" media = "screen"/>
+	    <link rel="stylesheet" href="./css/normalize.css">
+	    <link rel="stylesheet" href="./css/main_autoPrinter.css" media="screen" type="text/css" />
+	    <link rel="stylesheet" href="css/main_butterflies.css" media="screen" type="text/css" />
+	    <link rel="icon" href="./images/titleicon.png" type="image/x-icon"/>
+	    <link rel="stylesheet" type="text/css" href="./css/main.css" media = "screen"/>
 
-    <script src="./js/jquery.js"></script>
-    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-    <script src="./js/tagcanvas.min.js" type="text/javascript"></script>
-    <script type="text/javascript"> 
-		window.onload = function() {
+	    <script src="./js/jquery.min.js"></script>
+	    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+	    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+	    <script src="./js/tagcanvas.min.js" type="text/javascript"></script>
+	    <script type="text/javascript"> 
+			window.onload = function() {
+				
+				try {
+					TagCanvas.Start('myCanvas', 'tags', {
+						textColour: '#87CEFA',
+						outlineColour: '#ff00ff',
+						reverse: true,
+						depth: 1,
+						maxSpeed: 0.06,
+						shape: "sphere",
+	  					weight: true,
+	  					weightMode: "both",
+	  					weightFrom: "data-weight",
+	  					weightGradient: {
+							
+							0:    '#f00', // red
+							0.33: '#ff0', // yellow
+							0.66: '#0f0', // green
+							1:    '#00f',  // blue
+
+	  					},
+	  					zoomMin: 0.8,
+	  					zoomMax: 1.2,
+	  					shuffleTags: true, // 随机排列
+	  					shadow: "#0f0", // 每个标签后面的阴影
+	  					shadowBlur: 3, //标记阴影模糊量
+	  					pulsateTo: 0.2,
+	  					pulsateTime: 3,
+	  					pinchZoom: true,
+	  					textFont: 'Impact,"Arial Black",sans-serif',
+	  					outlineColour: 'rgba(0, 0, 0, 0.333)',
+	  					outlineMethod: "block"
+
+					});
+				} catch (e) {
+					// something went wrong, hide the canvas container
+					document.getElementById('myCanvasContainer').style.display = 'none';
+				}
+			};
+	    </script>
+
+	</head>
+	<body>
+		<div class = "content" id = "ct">
 			
-			try {
-				TagCanvas.Start('myCanvas', 'tags', {
-					textColour: '#87CEFA',
-					outlineColour: '#ff00ff',
-					reverse: true,
-					depth: 1,
-					maxSpeed: 0.06,
-					shape: "sphere",
-  					weight: true,
-  					weightMode: "both",
-  					weightFrom: "data-weight",
-  					weightGradient: {
-						
-						0:    '#f00', // red
-						0.33: '#ff0', // yellow
-						0.66: '#0f0', // green
-						1:    '#00f',  // blue
+			<audio controls="controls" autoplay="autoplay" style="display: none;">
+				<source src="./audio/bgAudio.mp3" type="audio/mpeg">
+				<span style=" display: hidden;" >Your browser does not support the audio element.</span>
+			</audio>
 
-  					},
-  					zoomMin: 0.8,
-  					zoomMax: 1.2,
-  					shuffleTags: true, // 随机排列
-  					shadow: "#0f0", // 每个标签后面的阴影
-  					shadowBlur: 3, //标记阴影模糊量
-  					pulsateTo: 0.2,
-  					pulsateTime: 3,
-  					pinchZoom: true,
-  					textFont: 'Impact,"Arial Black",sans-serif',
-  					outlineColour: 'rgba(0, 0, 0, 0.333)',
-  					outlineMethod: "block"
+			<div class = "left_list" id = "ll">
+				<section class="section">
 
-				});
-			} catch (e) {
-				// something went wrong, hide the canvas container
-				document.getElementById('myCanvasContainer').style.display = 'none';
-			}
-		};
-    </script>
-
-</head>
-<body>
-	<div class = "content" id = "ct">
-		
-		<audio controls="controls" autoplay="autoplay" style="display: none;">
-			<source src="./audio/bgAudio.mp3" type="audio/mpeg">
-			<span style=" display: hidden;" >Your browser does not support the audio element.</span>
-		</audio>
-
-		<div class = "left_list" id = "ll">
-			<section class="section">
-
-			    <dl class="list catalog">
-			        <dt class="list_top">
-			        	<i class="catalog_words">目录栏</i>
-			        	<i class="toggle">收放</i>			      
-			        </dt>
-			        <dd><a href="#">Hacker</a></dd>
-			        <dd><a href="#">Geeker</a></dd>
-			        <dd><a href="#">操作系统</a></dd>
-			        <dd><a href="#">汇编</a></dd>
-			        <dd><a href="main.html">C</a></dd>
-			        <dd><a href="main.html">C++</a></dd>
-			        <dd><a href="#">C#</a></dd>
-			        <dd><a href="#">CSS</a></dd>
-			        <dd><a href="#">HTML</a></dd>
-			    	<dd><a href="#">Javascript</a></dd>
-			        <dd><a href="#">Java</a></dd>
-			        <dd><a href="#">PHP</a></dd>
-			        <dd><a href="#">Perl</a></dd>
-			        <dd><a href="#">Python</a></dd>
-			        <dd><a href="#">Ruby</a></dd>
-			        <dd><a href="#">Linux</a></dd>
-			        <dd><a href="#">其他</a></dd>
-			    </dl>
-			    
-			</section>
-		</div>
-		
-		<div class = "auto_print">	
-			<div class="code-editor">
-		   		<span class="control"></span>
-		   		<span class="control"></span>
-		   		<span class="control"></span> 
-		   		<pre class="numbers linenums prettyprint prettyprinted">
-		    		<ol class="linenums">
-			     		<li class="L0">
-			     			<code class="css">
-			     				<span class="pln">root</span>
-			     				<span class="pun">@</span>
-			     				<span class="str">linux</span>
-			     				<span class="pun">:</span>
-			     				<span class="pln">~</span>
-			     				<span class="pun"># </span>
-			     				<span class="kwd"> 
-			     					Hello, world ! I'm  learning hard to become a        
-			     				</span>
-			     			</code>
-			     		</li>
-			     		<li class="L1">
-			     			<code class="css">
-			     				<span class="kwd">full stack developer who takes safety as the primary mission ! </span>
-			     			</code>
-			     		</li>
-			     		<li class="L2">
-			     			<code class="css">
-			     				<span class="kwd">-------------------------------------------------------------------------------</span>
-			     			</code>
-			     		</li>
-			     		<li class="L3">
-			     			<code class="css">
-			     				<span class="kwd">努力成为一名以安全为首要任务的全栈开发工程师。</span>
-			     			</code>
-			     		</li>			     
-			     		<li class="L4">
-			     			<code class="css">
-			     				<span class="kwd">本博客主要关注：Hacker, Geeker, C, C++, C#, Java, Python,  </span>
-			     			</code>
-			     		</li>
-			     		<li class="L5">
-			     			<code class="css">
-			     				<span class="kwd">PHP, Perl, Ruby, html, css, javascript, Penetration, OS...</span>
-			     			</code>
-			     		</li>
-			     		<li class="L6">
-			     			<code class="css">
-			     				<span class="kwd">-------------------------------------------------------------------------------</span>
-			     			</code>
-			     		</li>
-			     		<li class="L7">
-			     			<code class="css">
-			     				<span class="fun">Contact me: </span>
-			     			</code>
-			     		</li>
-			     		<li class="L8">
-			     			<code class="css">
-			     				<span class="fun">Email：  greyhat88888888@gmail.com </span>
-			     			</code>
-			     		</li>
-			     		<li class="L9">
-			     			<code class="css">
-			     				
-			     			</code>
-			     		</li>
-			     		<li class="L0">
-			     			<code class="css">
-			     				
-			     			</code>
-			     		</li>
-			     		<li class="L1">
-			     			<code class="css">
-			     				
-			     			</code>
-			     		</li>
-		    		</ol>
-		    	</pre> 
-		  	</div>	
-		</div>
-
-		<div class="tagsCloud" id="tagsCloud">
-			<div id="myCanvasContainer">
-		      <canvas width="360" height="360" id="myCanvas">
-		        <p>Anything in here will be replaced on browsers that support the canvas element</p>
-		      </canvas>
-		    </div>
-		    <div id="tags">
-		      <ul>
-			    <li><a href="#" data-weight = "66" >Hacker</a></li>
-				<li><a href="#" data-weight = "25">Geeker</a></li>
-				<li><a href="#" data-weight = "35">汇编</a></li>
-				<li><a href="#" data-weight = "58">操作系统</a></li>
-				<li><a href="main.html" data-weight = "46">C</a></li>
-				<li><a href="main.html" data-weight = "39">C++</a></li>
-				<li><a href="#" data-weight = "48">CSS</a></li>
-				<li><a href="#" data-weight = "36">HTML</a></li>
-				<li><a href="#" data-weight = "45">Javascript</a></li>
-				<li><a href="#" data-weight = "56">Java</a></li>
-				<li><a href="#" data-weight = "30">PHP</a></li>
-				<li><a href="#" data-weight = "25">Perl</a></li>
-				<li><a href="#" data-weight = "35">Python</a></li>
-				<li><a href="#" data-weight = "28">Ruby</a></li>
-				<li><a href="#" data-weight = "55">Linux</a></li>
-				<li><a href="#" data-weight = "20">其他</a></li>
-		      </ul>
-		    </div>
-		</div>
-
-		<!--svg元素： 定义SVG文档片断-->
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://	www.w3.org/XML/1998/namespace" class="svg-defs">
-  			<!--defs元素： 被引用元素的容器-->
-  			<defs>
-
-			    <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
-			      	<image xlink:href="./images/butterflies.png" width="100" height="100"      
-			      	    preserveAspectRatio="none">			      		
-			      	</image>
-			    </pattern>
-
-			    <!--g元素: 用于把相关元素进行组合的容器元素-->
-	    		<g id="shape-butterfly-1">
-	    			<!--path元素: 定义路径-->
-					<path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
-					c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
-					l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
-					c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
-					c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
-					c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
-					c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
-					c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
-					c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
-					c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
-					c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
-					c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
-					c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
-					c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
-					c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
-					c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
-					c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
-					c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
-					c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
-					c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
-					c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
-					c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
-					C4.417,4.25,6.483,3.317,8.65,2.85z"/>
-	    		<g>
-  			</defs>
-		</svg>
-
-		<section class="scene3d">
-
-			<div class="butterfly_container">
-				<!--<var> 标签:表示变量的名称，或者由用户提供的值-->
-				<var class="rotate3d">
-					<var class="scale">
-						<var class="translate3d">
-							<var class="translate3d-1">
-								<figure class="butterfly">
-							        <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
-							        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							      	<svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
-							        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-							      	</svg> 
-								</figure>
-							</var>
-						</var>
-					</var>
-				</var>
+				    <dl class="list catalog">
+				        <dt class="list_top">
+				        	<i class="catalog_words">目录栏</i>
+				        	<i class="toggle">收放</i>			      
+				        </dt>
+				        <dd><a href="#">Hacker</a></dd>
+				        <dd><a href="#">Geeker</a></dd>
+				        <dd><a href="#">操作系统</a></dd>
+				        <dd><a href="#">汇编</a></dd>
+				        <dd><a href="main.html">C</a></dd>
+				        <dd><a href="main.html">C++</a></dd>
+				        <dd><a href="#">C#</a></dd>
+				        <dd><a href="#">CSS</a></dd>
+				        <dd><a href="#">HTML</a></dd>
+				    	<dd><a href="#">Javascript</a></dd>
+				        <dd><a href="#">Java</a></dd>
+				        <dd><a href="#">PHP</a></dd>
+				        <dd><a href="#">Perl</a></dd>
+				        <dd><a href="#">Python</a></dd>
+				        <dd><a href="#">Ruby</a></dd>
+				        <dd><a href="#">Linux</a></dd>
+				        <dd><a href="#">其他</a></dd>
+				    </dl>
+				    
+				</section>
+			</div>
+			
+			<div class = "auto_print">	
+				<div class="code-editor">
+			   		<span class="control"></span>
+			   		<span class="control"></span>
+			   		<span class="control"></span> 
+			   		<pre class="numbers linenums prettyprint prettyprinted">
+			    		<ol class="linenums">
+				     		<li class="L0">
+				     			<code class="css">
+				     				<span class="pln">root</span>
+				     				<span class="pun">@</span>
+				     				<span class="str">linux</span>
+				     				<span class="pun">:</span>
+				     				<span class="pln">~</span>
+				     				<span class="pun"># </span>
+				     				<span class="kwd"> 
+				     					Hello, world ! I'm  learning hard to become a        
+				     				</span>
+				     			</code>
+				     		</li>
+				     		<li class="L1">
+				     			<code class="css">
+				     				<span class="kwd">full stack developer who takes safety as the primary mission ! </span>
+				     			</code>
+				     		</li>
+				     		<li class="L2">
+				     			<code class="css">
+				     				<span class="kwd">-------------------------------------------------------------------------------</span>
+				     			</code>
+				     		</li>
+				     		<li class="L3">
+				     			<code class="css">
+				     				<span class="kwd">努力成为一名以安全为首要任务的全栈开发工程师。</span>
+				     			</code>
+				     		</li>			     
+				     		<li class="L4">
+				     			<code class="css">
+				     				<span class="kwd">本博客主要关注：Hacker, Geeker, C, C++, C#, Java, Python,  </span>
+				     			</code>
+				     		</li>
+				     		<li class="L5">
+				     			<code class="css">
+				     				<span class="kwd">PHP, Perl, Ruby, html, css, javascript, Penetration, OS...</span>
+				     			</code>
+				     		</li>
+				     		<li class="L6">
+				     			<code class="css">
+				     				<span class="kwd">-------------------------------------------------------------------------------</span>
+				     			</code>
+				     		</li>
+				     		<li class="L7">
+				     			<code class="css">
+				     				<span class="fun">Contact me: </span>
+				     			</code>
+				     		</li>
+				     		<li class="L8">
+				     			<code class="css">
+				     				<span class="fun">Email：  greyhat88888888@gmail.com </span>
+				     			</code>
+				     		</li>
+				     		<li class="L9">
+				     			<code class="css">
+				     				
+				     			</code>
+				     		</li>
+				     		<li class="L0">
+				     			<code class="css">
+				     				
+				     			</code>
+				     		</li>
+				     		<li class="L1">
+				     			<code class="css">
+				     				
+				     			</code>
+				     		</li>
+			    		</ol>
+			    	</pre> 
+			  	</div>	
 			</div>
 
-			<div class="butterfly_container" 
-			   style="margin-top: -150px; margin-left: 140px;
-			          -webkit-animation-duration: 5s;
-			          -moz-animation-duration: 5s;
-			          -ms-animation-duration: 5s;
-			          -o-animation-duration: 5s;
-			          animation-duration: 5s;">
-				<var class="rotate3d">
-					<var class="scale">
-						<var class="translate3d">
-							<var class="translate3d-1">
-								<figure class="butterfly">
-									<svg class="wing left" viewBox="0 0 50 100"
-										style="-webkit-animation-duration: .75s;
-										-moz-animation-duration: .75s;
-										-ms-animation-duration: .75s;
-										-o-animation-duration: .75s;
-										animation-duration: .75s;">
-										<use class="left" xlink:href="#shape-butterfly-1"></use>
-									</svg> 
-									<svg class="wing right" viewBox="0 0 50 100"
-										style="-webkit-animation-duration: .75s;
-										-moz-animation-duration: .75s;
-										-ms-animation-duration: .75s;
-										-o-animation-duration: .75s;
-										animation-duration: .75s;">
-										<use class="left" xlink:href="#shape-butterfly-1"></use>
-									</svg> 
+			<div class="tagsCloud" id="tagsCloud">
+				<div id="myCanvasContainer">
+			      <canvas width="360" height="360" id="myCanvas">
+			        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+			      </canvas>
+			    </div>
+			    <div id="tags">
+			      <ul>
+				    <li><a href="#" data-weight = "66" >Hacker</a></li>
+					<li><a href="#" data-weight = "25">Geeker</a></li>
+					<li><a href="#" data-weight = "35">汇编</a></li>
+					<li><a href="#" data-weight = "58">操作系统</a></li>
+					<li><a href="main.html" data-weight = "46">C</a></li>
+					<li><a href="main.html" data-weight = "39">C++</a></li>
+					<li><a href="#" data-weight = "48">CSS</a></li>
+					<li><a href="#" data-weight = "36">HTML</a></li>
+					<li><a href="#" data-weight = "45">Javascript</a></li>
+					<li><a href="#" data-weight = "56">Java</a></li>
+					<li><a href="#" data-weight = "30">PHP</a></li>
+					<li><a href="#" data-weight = "25">Perl</a></li>
+					<li><a href="#" data-weight = "35">Python</a></li>
+					<li><a href="#" data-weight = "28">Ruby</a></li>
+					<li><a href="#" data-weight = "55">Linux</a></li>
+					<li><a href="#" data-weight = "20">其他</a></li>
+			      </ul>
+			    </div>
+			</div>
+
+			<!--svg元素： 定义SVG文档片断-->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://	www.w3.org/XML/1998/namespace" class="svg-defs">
+	  			<!--defs元素： 被引用元素的容器-->
+	  			<defs>
+
+				    <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+				      	<image xlink:href="./images/butterflies.png" width="100" height="100"      
+				      	    preserveAspectRatio="none">			      		
+				      	</image>
+				    </pattern>
+
+				    <!--g元素: 用于把相关元素进行组合的容器元素-->
+		    		<g id="shape-butterfly-1">
+		    			<!--path元素: 定义路径-->
+						<path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
+						c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
+						l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
+						c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
+						c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
+						c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
+						c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
+						c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
+						c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
+						c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
+						c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
+						c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
+						c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
+						c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
+						c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
+						c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
+						c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
+						c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
+						c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
+						c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
+						c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
+						c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
+						C4.417,4.25,6.483,3.317,8.65,2.85z"/>
+		    		<g>
+	  			</defs>
+			</svg>
+
+			<section class="scene3d">
+
+				<div class="butterfly_container">
+					<!--<var> 标签:表示变量的名称，或者由用户提供的值-->
+					<var class="rotate3d">
+						<var class="scale">
+							<var class="translate3d">
+								<var class="translate3d-1">
+									<figure class="butterfly">
+								        <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
+								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								      	<svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
+								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
+								      	</svg> 
 									</figure>
-							</var>
-				        </var>
-					</var>
-				</var>
-			</div>
-
-			<div class="butterfly_container scale_half" 
-			   style="margin-top: -10px; margin-left: 50px;
-			          -webkit-animation-duration: 5s;
-			          -moz-animation-duration: 5s;
-			          -ms-animation-duration: 5s;
-			          -o-animation-duration: 5s;
-			          animation-duration: 5s;">
-				<var class="rotate3d">
-				    <var class="scale">
-					    <var class="translate3d">
-						    <var class="translate3d-1">
-							    <figure class="butterfly">
-							        <svg class="wing left" viewBox="0 0 50 100"
-							            style="-webkit-animation-duration: .75s;
-							                    -moz-animation-duration: .75s;
-							                    -ms-animation-duration: .75s;
-							                    -o-animation-duration: .75s;
-							                    animation-duration: .75s;">
-							            <use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							        <svg class="wing right" viewBox="0 0 50 100"
-							            style="-webkit-animation-duration: .75s;
-							                    -moz-animation-duration: .75s;
-							                    -ms-animation-duration: .75s;
-							                    -o-animation-duration: .75s;
-							                    animation-duration: .75s;">
-							            <use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							    </figure>
-						    </var>
-					    </var>
-				    </var>
-				</var>
-			</div>
-
-			<div class="butterfly_container scale_half" 
-			    style="margin-top: 20px;
-			        -webkit-animation-duration: 20s;
-			        -moz-animation-duration: 20s;
-			        -ms-animation-duration: 20s;
-			        -o-animation-duration: 20s;
-			        animation-duration: 20s;">
-				<var class="rotate3d">
-					<var class="scale">
-						<var class="translate3d">
-							<var class="translate3d-1">
-								<figure class="butterfly">
-								    <svg class="wing left" viewBox="0 0 50 100"
-								        style="-webkit-animation-duration: 1s;
-								            -moz-animation-duration: 1s;
-								            -ms-animation-duration: 1s;
-								            -o-animation-duration: 1s;
-								            animation-duration: 1s;">
-								        <use class="left" xlink:href="#shape-butterfly-1"></use>
-								    </svg> 
-								    <svg class="wing right" viewBox="0 0 50 100"
-								        style="-webkit-animation-duration: 1s;
-								            -moz-animation-duration: 1s;
-								            -ms-animation-duration: 1s;
-								            -o-animation-duration: 1s;
-								            animation-duration: 1s;">
-								        <use class="left" xlink:href="#shape-butterfly-1"></use>
-								    </svg> 
-								</figure>
+								</var>
 							</var>
 						</var>
 					</var>
-				</var>
-			</div>
+				</div>
 
-			<div class="butterfly_container scale_half" 
-			   style="margin-top: 100px; margin-left: 50px;
-			        -webkit-animation-duration: 20s;
-			        -moz-animation-duration: 20s;
-			        -ms-animation-duration: 20s;
-			        -o-animation-duration: 20s;
-			        animation-duration: 20s;">
-				<var class="rotate3d">
-				    <var class="scale">
-					    <var class="translate3d">
-						    <var class="translate3d-1">
-							    <figure class="butterfly">
-							      	<svg class="wing left" viewBox="0 0 50 100"
-							           	style="-webkit-animation-duration: 1.2s;
-							                -moz-animation-duration: 1.2s;
-							                -ms-animation-duration: 1.2s;
-							                -o-animation-duration: 1.2s;
-							                animation-duration: 1.2s;">
-							        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-							      	</svg> 
-							      	<svg class="wing right" viewBox="0 0 50 100"
-							           	style="-webkit-animation-duration: 1.2s;
-							                -moz-animation-duration: 1.2s;
-							                -ms-animation-duration: 1.2s;
-							                -o-animation-duration: 1.2s;
-							                animation-duration: 1.2s;">
-							        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-							      	</svg> 
-							    </figure>
+				<div class="butterfly_container" 
+				   style="margin-top: -150px; margin-left: 140px;
+				          -webkit-animation-duration: 5s;
+				          -moz-animation-duration: 5s;
+				          -ms-animation-duration: 5s;
+				          -o-animation-duration: 5s;
+				          animation-duration: 5s;">
+					<var class="rotate3d">
+						<var class="scale">
+							<var class="translate3d">
+								<var class="translate3d-1">
+									<figure class="butterfly">
+										<svg class="wing left" viewBox="0 0 50 100"
+											style="-webkit-animation-duration: .75s;
+											-moz-animation-duration: .75s;
+											-ms-animation-duration: .75s;
+											-o-animation-duration: .75s;
+											animation-duration: .75s;">
+											<use class="left" xlink:href="#shape-butterfly-1"></use>
+										</svg> 
+										<svg class="wing right" viewBox="0 0 50 100"
+											style="-webkit-animation-duration: .75s;
+											-moz-animation-duration: .75s;
+											-ms-animation-duration: .75s;
+											-o-animation-duration: .75s;
+											animation-duration: .75s;">
+											<use class="left" xlink:href="#shape-butterfly-1"></use>
+										</svg> 
+										</figure>
+								</var>
+					        </var>
+						</var>
+					</var>
+				</div>
+
+				<div class="butterfly_container scale_half" 
+				   style="margin-top: -10px; margin-left: 50px;
+				          -webkit-animation-duration: 5s;
+				          -moz-animation-duration: 5s;
+				          -ms-animation-duration: 5s;
+				          -o-animation-duration: 5s;
+				          animation-duration: 5s;">
+					<var class="rotate3d">
+					    <var class="scale">
+						    <var class="translate3d">
+							    <var class="translate3d-1">
+								    <figure class="butterfly">
+								        <svg class="wing left" viewBox="0 0 50 100"
+								            style="-webkit-animation-duration: .75s;
+								                    -moz-animation-duration: .75s;
+								                    -ms-animation-duration: .75s;
+								                    -o-animation-duration: .75s;
+								                    animation-duration: .75s;">
+								            <use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								        <svg class="wing right" viewBox="0 0 50 100"
+								            style="-webkit-animation-duration: .75s;
+								                    -moz-animation-duration: .75s;
+								                    -ms-animation-duration: .75s;
+								                    -o-animation-duration: .75s;
+								                    animation-duration: .75s;">
+								            <use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								    </figure>
+							    </var>
 						    </var>
 					    </var>
-				    </var>
-				</var>
-			</div>
+					</var>
+				</div>
 
-			<div class="butterfly_container scale_third" 
-			    style="margin-top: 150px;
-			        -webkit-animation-duration: 20s;
-			        -moz-animation-duration: 20s;
-			        -ms-animation-duration: 20s;
-			        -o-animation-duration: 20s;
-			        animation-duration: 20s;">
-				<var class="rotate3d">
-				    <var class="scale">
-					    <var class="translate3d">
-						    <var class="translate3d-1">
-							    <figure class="butterfly">
-							        <svg class="wing left" viewBox="0 0 50 100"
-							            style="-webkit-animation-duration: .35s;
-							                -moz-animation-duration: .35s;
-							                -ms-animation-duration: .35s;
-							                -o-animation-duration: .35s;
-							                animation-duration: .35s;">
-							            <use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							        <svg class="wing right" viewBox="0 0 50 100"
-							            style="-webkit-animation-duration: .35s;
-							                -moz-animation-duration: .35s;
-							                -ms-animation-duration: .53s;
-							                -o-animation-duration: .35s;
-							                animation-duration: .35s;">
-							            <use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							    </figure>
+				<div class="butterfly_container scale_half" 
+				    style="margin-top: 20px;
+				        -webkit-animation-duration: 20s;
+				        -moz-animation-duration: 20s;
+				        -ms-animation-duration: 20s;
+				        -o-animation-duration: 20s;
+				        animation-duration: 20s;">
+					<var class="rotate3d">
+						<var class="scale">
+							<var class="translate3d">
+								<var class="translate3d-1">
+									<figure class="butterfly">
+									    <svg class="wing left" viewBox="0 0 50 100"
+									        style="-webkit-animation-duration: 1s;
+									            -moz-animation-duration: 1s;
+									            -ms-animation-duration: 1s;
+									            -o-animation-duration: 1s;
+									            animation-duration: 1s;">
+									        <use class="left" xlink:href="#shape-butterfly-1"></use>
+									    </svg> 
+									    <svg class="wing right" viewBox="0 0 50 100"
+									        style="-webkit-animation-duration: 1s;
+									            -moz-animation-duration: 1s;
+									            -ms-animation-duration: 1s;
+									            -o-animation-duration: 1s;
+									            animation-duration: 1s;">
+									        <use class="left" xlink:href="#shape-butterfly-1"></use>
+									    </svg> 
+									</figure>
+								</var>
+							</var>
+						</var>
+					</var>
+				</div>
+
+				<div class="butterfly_container scale_half" 
+				   style="margin-top: 100px; margin-left: 50px;
+				        -webkit-animation-duration: 20s;
+				        -moz-animation-duration: 20s;
+				        -ms-animation-duration: 20s;
+				        -o-animation-duration: 20s;
+				        animation-duration: 20s;">
+					<var class="rotate3d">
+					    <var class="scale">
+						    <var class="translate3d">
+							    <var class="translate3d-1">
+								    <figure class="butterfly">
+								      	<svg class="wing left" viewBox="0 0 50 100"
+								           	style="-webkit-animation-duration: 1.2s;
+								                -moz-animation-duration: 1.2s;
+								                -ms-animation-duration: 1.2s;
+								                -o-animation-duration: 1.2s;
+								                animation-duration: 1.2s;">
+								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
+								      	</svg> 
+								      	<svg class="wing right" viewBox="0 0 50 100"
+								           	style="-webkit-animation-duration: 1.2s;
+								                -moz-animation-duration: 1.2s;
+								                -ms-animation-duration: 1.2s;
+								                -o-animation-duration: 1.2s;
+								                animation-duration: 1.2s;">
+								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
+								      	</svg> 
+								    </figure>
+							    </var>
 						    </var>
 					    </var>
-				    </var>
-				</var>
-			</div>
+					</var>
+				</div>
 
-			<div class="butterfly_container scale_third" 
-			    style="margin-top: -250px; margin-left: 300px; 
-			        -webkit-animation-duration: 4s;
-			        -moz-animation-duration: 4s;
-			        -ms-animation-duration: 4s;
-			        -o-animation-duration: 4s;
-			        animation-duration: 4s;">
-				<var class="rotate3d">
-				    <var class="scale">
-					    <var class="translate3d">
-						    <var class="translate3d-1">
-							    <figure class="butterfly">
-							      	<svg class="wing left" viewBox="0 0 50 100"
-							            style="-webkit-animation-duration: .45s;
-							                -moz-animation-duration: .45s;
-							                -ms-animation-duration: .45s;
-							                -o-animation-duration: .45s;
-							                animation-duration: .45s;">
-							        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							        <svg class="wing right" viewBox="0 0 50 100"
-							           	style="-webkit-animation-duration: .45s;
-							                -moz-animation-duration: .45s;
-							                -ms-animation-duration: .45s;
-							                -o-animation-duration: .45s;
-							                animation-duration: .45s;">
-							            <use class="left" xlink:href="#shape-butterfly-1"></use>
-							        </svg> 
-							    </figure>
+				<div class="butterfly_container scale_third" 
+				    style="margin-top: 150px;
+				        -webkit-animation-duration: 20s;
+				        -moz-animation-duration: 20s;
+				        -ms-animation-duration: 20s;
+				        -o-animation-duration: 20s;
+				        animation-duration: 20s;">
+					<var class="rotate3d">
+					    <var class="scale">
+						    <var class="translate3d">
+							    <var class="translate3d-1">
+								    <figure class="butterfly">
+								        <svg class="wing left" viewBox="0 0 50 100"
+								            style="-webkit-animation-duration: .35s;
+								                -moz-animation-duration: .35s;
+								                -ms-animation-duration: .35s;
+								                -o-animation-duration: .35s;
+								                animation-duration: .35s;">
+								            <use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								        <svg class="wing right" viewBox="0 0 50 100"
+								            style="-webkit-animation-duration: .35s;
+								                -moz-animation-duration: .35s;
+								                -ms-animation-duration: .53s;
+								                -o-animation-duration: .35s;
+								                animation-duration: .35s;">
+								            <use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								    </figure>
+							    </var>
 						    </var>
 					    </var>
-				    </var>
-				</var>
+					</var>
+				</div>
+
+				<div class="butterfly_container scale_third" 
+				    style="margin-top: -250px; margin-left: 300px; 
+				        -webkit-animation-duration: 4s;
+				        -moz-animation-duration: 4s;
+				        -ms-animation-duration: 4s;
+				        -o-animation-duration: 4s;
+				        animation-duration: 4s;">
+					<var class="rotate3d">
+					    <var class="scale">
+						    <var class="translate3d">
+							    <var class="translate3d-1">
+								    <figure class="butterfly">
+								      	<svg class="wing left" viewBox="0 0 50 100"
+								            style="-webkit-animation-duration: .45s;
+								                -moz-animation-duration: .45s;
+								                -ms-animation-duration: .45s;
+								                -o-animation-duration: .45s;
+								                animation-duration: .45s;">
+								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								        <svg class="wing right" viewBox="0 0 50 100"
+								           	style="-webkit-animation-duration: .45s;
+								                -moz-animation-duration: .45s;
+								                -ms-animation-duration: .45s;
+								                -o-animation-duration: .45s;
+								                animation-duration: .45s;">
+								            <use class="left" xlink:href="#shape-butterfly-1"></use>
+								        </svg> 
+								    </figure>
+							    </var>
+						    </var>
+					    </var>
+					</var>
+				</div>
+			</section>
+
+			<div class="bottom_link">
+				<ul>
+					<li class="star_me">
+						<a href="https://github.com/MrTheWhiteHat/MrTheWhiteHat.github.io">
+							
+      						<button type="submit">
+        						<svg aria-hidden="true" class="octicon octicon-repo-star" height="16" version="1.1" viewBox="0 0 14 16" width="14">
+        							<path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z">
+        							</path>
+        						</svg>
+        							Star <br />
+      						</button>
+        					
+						</a>
+						
+					</li>
+
+					<li class="share_me">
+						<a href="#">
+							
+      						<button type="submit">
+        						<svg aria-hidden="true" class="octicon octicon-repo-share" height="16" version="1.1" viewBox="0 0 10 16" width="10">
+        							<path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z">
+        							</path>
+        						</svg>
+        							Share
+      						</button>
+        					
+						</a>
+						
+					</li>
+
+					<li>
+					</li>
+				</ul>
 			</div>
-		</section>
 
-		<div class="share">
-			<ul>
-				<li>
-					<a href="#" onclick="dolog('sina', function(){window.open('http://v.t.sina.com.cn/share/share.php?title=' + encodeURIComponent('Personal of Mr. White') + '&pic=' + encodeURIComponent('./images/index1.jpg') + '&sourceUrl=', '_parent', ['toolbar=0,status=0,resizable=1,width=630,height=500,left=',(screen.width-630)/2,',top=',(screen.height-500)/2].join(''));return false;});" class="wb1" title="分享到新浪微博">分享到新浪微博</a>
-				</li>
-
-				<li>
-				</li>
-
-				<li>
-				</li>
-
-				<li>
-				</li>
-
-				<li>
-				</li>
-
-				<li>
-				</li>
-
-				<li>
-				</li>
-			</ul>
 		</div>
+		
+		<div class = "footer" id = "ft"></div>
+		
+		<div class = "bg_img" id = "bi"></div>
 
-	</div>
-	
-	<div class = "footer" id = "ft"></div>
-	
-	<div class = "bg_img" id = "bi"></div>
+		<!--js脚本的位置特别重要，有的js需要文档加载完了之后，再加载js,才不会出错。这个3d的菜单就是得先加载完文档才有效果。搞了好久......-->
+		 
+		<script src='./js/jquery_draggable.js'></script>
 
-	<!--js脚本的位置特别重要，有的js需要文档加载完了之后，再加载js,才不会出错。这个3d的菜单就是得先加载完文档才有效果。搞了好久......-->
-	 
-	<!--[if IE 10]> <script src="./js/3d-menu.js"></script> <![endif]-->
-	<!--[if !IE]><!--> <script src="./js/3d-menu.js"></script> <!--<![endif]-->  <!--除IE外都可识别-->
-	
-	<!--script type="text/javascript">
-		// js检查浏览器类型与版本
-		function checkBrowser() {
-			if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/6./i)=="6."){
-					alert("IE 6");
-			}
-			else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7."){
-					alert("IE 7");
-			}
-			else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8."){
-					alert("IE 8");
-			}
-			else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
-					alert("IE 9");
-			}
+  		<script src="./js/jquery_draggable_call.js"></script>
+		<!--[if IE 10]> <script src="./js/3d-menu.js"></script> <![endif]-->
+		<!--[if !IE]><!--> <script src="./js/3d-menu.js"></script> <!--<![endif]-->  <!--除IE外都可识别-->
+		
+		<!--script type="text/javascript">
+			// js检查浏览器类型与版本
+			function checkBrowser() {
+				if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/6./i)=="6."){
+						alert("IE 6");
+				}
+				else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7."){
+						alert("IE 7");
+				}
+				else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8."){
+						alert("IE 8");
+				}
+				else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
+						alert("IE 9");
+				}
 
-			else if(navigator.userAgent.indexOf("Opera") != -1) { 
-				alert('Opera'); 
-			} else if(navigator.userAgent.indexOf("MSIE") != -1) { 
-				alert('Internet Explorer');
-			} else if(navigator.userAgent.indexOf("Firefox") != -1) { 
-				alert('Firefox'); 
-			} else if(navigator.userAgent.indexOf("Netscape") != -1) { 
-				alert('Netscape'); 
-			} else if(navigator.userAgent.indexOf("Chrome") != -1) { 
-				alert('Chrome'); 
-			} else if(navigator.userAgent.indexOf("Safari") != -1) {
-				alert('Safari');
-			} else if(navigator.userAgent.indexOf("Edge") != -1) {
-				alert('Edge');
-			}else{ alert('无法识别的浏览器。'); }
-		}
-		checkBrowser();
-	</script-->
-</body>
+				else if(navigator.userAgent.indexOf("Opera") != -1) { 
+					alert('Opera'); 
+				} else if(navigator.userAgent.indexOf("MSIE") != -1) { 
+					alert('Internet Explorer');
+				} else if(navigator.userAgent.indexOf("Firefox") != -1) { 
+					alert('Firefox'); 
+				} else if(navigator.userAgent.indexOf("Netscape") != -1) { 
+					alert('Netscape'); 
+				} else if(navigator.userAgent.indexOf("Chrome") != -1) { 
+					alert('Chrome'); 
+				} else if(navigator.userAgent.indexOf("Safari") != -1) {
+					alert('Safari');
+				} else if(navigator.userAgent.indexOf("Edge") != -1) {
+					alert('Edge');
+				}else{ alert('无法识别的浏览器。'); }
+			}
+			checkBrowser();
+		</script-->
+	</body>
 </html>
