@@ -15,10 +15,9 @@
 	    <link rel="stylesheet" href="css/main_butterflies.css" media="screen" type="text/css" />
 	    <link rel="icon" href="./images/titleicon.png" type="image/x-icon"/>
 	    <link rel="stylesheet" type="text/css" href="./css/main.css" media = "screen"/>
-
+	    
 	    <script src="./js/jquery.min.js"></script>
 	    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-	    <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
 	    <script src="./js/tagcanvas.min.js" type="text/javascript"></script>
 	    <script type="text/javascript"> 
 			window.onload = function() {
@@ -60,11 +59,13 @@
 					document.getElementById('myCanvasContainer').style.display = 'none';
 				}
 			};
-	    </script>
+	    </script>    
 
 	</head>
 	<body>
 		<div class = "content" id = "ct">
+
+			<!--[if !IE]><!--> <!--<![endif]-->
 			
 			<audio controls="controls" autoplay="autoplay" style="display: none;">
 				<source src="./audio/bgAudio.mp3" type="audio/mpeg">
@@ -253,7 +254,6 @@
 			<section class="scene3d">
 
 				<div class="butterfly_container">
-					<!--<var> 标签:表示变量的名称，或者由用户提供的值-->
 					<var class="rotate3d">
 						<var class="scale">
 							<var class="translate3d">
@@ -482,6 +482,7 @@
 					</var>
 				</div>
 			</section>
+			
 
 			<div class="bottom_link">
 				<ul>
@@ -531,42 +532,8 @@
 		<script src='./js/jquery_draggable.js'></script>
 
   		<script src="./js/jquery_draggable_call.js"></script>
-		<!--[if IE 10]> <script src="./js/3d-menu.js"></script> <![endif]-->
-		<!--[if !IE]><!--> <script src="./js/3d-menu.js"></script> <!--<![endif]-->  <!--除IE外都可识别-->
 		
-		<!--script type="text/javascript">
-			// js检查浏览器类型与版本
-			function checkBrowser() {
-				if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/6./i)=="6."){
-						alert("IE 6");
-				}
-				else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7."){
-						alert("IE 7");
-				}
-				else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8."){
-						alert("IE 8");
-				}
-				else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
-						alert("IE 9");
-				}
+		<script src="./js/3d-menu.js"></script>
 
-				else if(navigator.userAgent.indexOf("Opera") != -1) { 
-					alert('Opera'); 
-				} else if(navigator.userAgent.indexOf("MSIE") != -1) { 
-					alert('Internet Explorer');
-				} else if(navigator.userAgent.indexOf("Firefox") != -1) { 
-					alert('Firefox'); 
-				} else if(navigator.userAgent.indexOf("Netscape") != -1) { 
-					alert('Netscape'); 
-				} else if(navigator.userAgent.indexOf("Chrome") != -1) { 
-					alert('Chrome'); 
-				} else if(navigator.userAgent.indexOf("Safari") != -1) {
-					alert('Safari');
-				} else if(navigator.userAgent.indexOf("Edge") != -1) {
-					alert('Edge');
-				}else{ alert('无法识别的浏览器。'); }
-			}
-			checkBrowser();
-		</script-->
 	</body>
 </html>
