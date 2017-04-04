@@ -115,13 +115,7 @@ html, body {
 	.wrap {
 
 		height: 38%;
-	}
-
-	#enter:active {
-	border-bottom-width: 0;
-	border-left-width: 0;	
-}
-	
+	}	
 }
 
 a {
