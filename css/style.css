@@ -89,6 +89,7 @@ html, body {
 
 }
 
+/*解决客户端兼容以及桌面大小兼容问题*/
 
 @media screen and (max-width: 784px) {
 	.welc {
