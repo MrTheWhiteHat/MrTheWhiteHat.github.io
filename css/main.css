@@ -289,7 +289,7 @@ li {
 		float: left;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -13%;
 		right: 0;	
 		margin: auto;
 	}
@@ -312,7 +312,7 @@ li {
 	}
 
 	.code-editor {
-		width: 34rem;
+		width: 40rem;
   		height: 20rem;
 	}
 
@@ -324,7 +324,7 @@ li {
 		float: left;
 		position: absolute;
 		top: 0;
-		left: -12%;
+		left: 0;
 		right: 0;	
 		margin: auto;
 	}
@@ -346,7 +346,7 @@ li {
 	}
 
 	.code-editor {
-		width: 40rem;
+		width: 35rem;
   		height: 20rem;
 	}
 }
