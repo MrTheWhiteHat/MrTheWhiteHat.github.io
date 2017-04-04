@@ -116,6 +116,11 @@ html, body {
 
 		height: 38%;
 	}
+
+	#enter:active {
+	border-bottom-width: 0;
+	border-left-width: 0;	
+}
 	
 }
 
@@ -177,11 +182,6 @@ a {
 #enter:hover {
 	background: hsla(220, 100%, 60%, 1);
 	
-}
-#enter:active {
-	border-bottom-width: 0;
-	border-left-width: 0;
-	margin-top: 6.6%;
 }
 
 @keyframes pulse {
