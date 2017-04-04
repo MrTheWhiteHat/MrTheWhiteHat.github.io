@@ -311,6 +311,11 @@ li {
 		margin: auto;
 	}
 
+	.code-editor {
+		width: 34rem;
+  		height: 20rem;
+	}
+
 
 }
 
@@ -340,6 +345,45 @@ li {
 		margin: auto;
 	}
 
+	.code-editor {
+		width: 35rem;
+  		height: 20rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.auto_print {
+		float: left;
+		position: absolute;
+		top: 0;
+		left: -10%;
+		right: 0;	
+		margin: auto;
+	}
+	
+	.tagsCloud {
+		float: left;
+		position: absolute; /*固定，不随滚动条滚动*/
+		top: 550px;
+		right: 15%;
+		margin: auto;
+	}
+
+	.catalog {
+		float: left;
+		position: absolute; /*固定，不随滚动条滚动*/
+		top: 550px;
+		left: 10%;
+		margin: auto;
+	}
+
+	.code-editor {
+		width: 40rem;
+  		height: 20rem;
+	}
+}
+
+
 @media screen and (min-width: 1200px) {
 	.auto_print {
 		float: left;
@@ -364,7 +408,13 @@ li {
 		top: 550px;
 		left: 25%;
 		margin: auto;
-	}	
+	}
+
+	.code-editor {
+		width: 36rem;
+  		height: 20rem;
+	}
+}	
 
 @media screen and (min-width: 1448px) {
 	.auto_print {
@@ -388,6 +438,11 @@ li {
 		float: left;
 		left: 5%;
     	top: 50px;
+	}
+
+	.code-editor {
+		width: 34rem;
+  		height: 20rem;
 	}
 }
 

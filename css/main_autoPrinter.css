@@ -289,8 +289,6 @@ ol.linenums li {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 34rem;
-  height: 20rem;
   margin: 4rem auto;
   position: relative;
   border-radius: 5px 5px 0 0;
