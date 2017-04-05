@@ -434,15 +434,16 @@ li {
     text-indent: 20px;
 
 	}
+	@media screen and (min-width: 1448px) {
+		.code-editor {
+			width: 34rem;
+	  		height: 28rem;
+		}
 
-	.code-editor {
-		width: 34rem;
-  		height: 28rem;
-	}
-
-	ol.linenums li {
-		font-size: 20px;
-  		line-height: 32px;
+		ol.linenums li {
+			font-size: 20px;
+	  		line-height: 32px;
+		}
 	}
 } 
 
