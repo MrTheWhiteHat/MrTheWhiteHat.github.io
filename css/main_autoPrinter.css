@@ -81,8 +81,6 @@ ol.linenums {
 }
 
 ol.linenums li {
-  font-size: 20px;
-  line-height: 22px;
   margin: 0 0 0.3125rem 0.75rem;
   word-spacing: 1px;
   overflow: hidden;
@@ -140,50 +138,50 @@ ol.linenums li {
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(7) {
-  -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
-  animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
-  -webkit-animation-delay: 18s;
-  animation-delay: 18s;
+  -webkit-animation: typingNone 1s steps(3, end), blink-caret 1s step-end 2s;
+  animation: typingMid 1s steps(3, end), blink-caret 1s step-end 2s;
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(8) {
   -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
   animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
-  -webkit-animation-delay: 21s;
-  animation-delay: 21s;
+  -webkit-animation-delay: 19s;
+  animation-delay: 19s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(9) {
   -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
   animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
-  -webkit-animation-delay: 22.5s;
-  animation-delay: 22.5s;
+  -webkit-animation-delay: 22s;
+  animation-delay: 22s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(10) {
   -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
   animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
-  -webkit-animation-delay: 24.1s;
-  animation-delay: 24.1s;
+  -webkit-animation-delay: 25s;
+  animation-delay: 25s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(11) {
   -webkit-animation: typingNone 1s steps(3, end), blink-caret 1s step-end 2s;
-  animation: typingNone 1s steps(3, end), blink-caret 1s step-end 2s;
-  -webkit-animation-delay: 27.1s;
-  animation-delay: 27.1s;
+  animation: typingMid 1s steps(3, end), blink-caret 1s step-end 2s;
+  -webkit-animation-delay: 26s;
+  animation-delay: 26s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(12) {
-  -webkit-animation: typingLast 1s steps(3, end), blink-caret 1s step-end infinite;
-  animation: typingLast 1s steps(3, end), blink-caret 1s step-end infinite;
-  -webkit-animation-delay: 30.1s;
-  animation-delay: 30.1s;
+  -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end infinite;
+  animation: typingMid 3s steps(22, end), blink-caret 1s step-end infinite;
+  -webkit-animation-delay: 30s;
+  animation-delay: 30s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -213,7 +211,7 @@ ol.linenums li {
   }
 
   to {
-    width: 666px;
+    width: 888px;
   }
 }
 @keyframes typing {
@@ -222,7 +220,7 @@ ol.linenums li {
   }
 
   to {
-    width: 666px;
+    width: 888px;
   }
 }
 @-webkit-keyframes typingLast {
@@ -292,7 +290,7 @@ ol.linenums li {
   margin: 4rem auto;
   position: relative;
   border-radius: 5px 5px 0 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 .code-editor::before {
   content: "";

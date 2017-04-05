@@ -103,46 +103,6 @@ a {
     height: 30px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 0) {
-  /* Put your WebKit(Chrome) specific code here. */
-  	.list dd {
-	    border-top-width: 3px;
-	    border-top-style: dashed;
-	    border-top-color: rgba(255,255,255,0.3);
-	}
-
-	.list {
-		height: 300px;
-		width: 300px;
-	}
-
-	.list a:hover {
-    
-    text-indent: 20px;
-
-	}
-}
-
-@-moz-document url-prefix() {
-  /* Put your Firefox specific code here. */
-  	.list dd {
-	    
-	    border-top-width: 3px;
-    	border-top-color: rgba(255,255,255,0.3);
-	}
-
-	.list {
-		height: 200px;
-		width: 200px;
-	}
-
-	.catalog a:hover {
-    
-    text-indent: 20px;
-
-	}
-} 
-
 /* UI */
 
 .toggle {
@@ -215,7 +175,7 @@ a {
 
 	width: 100%;
 	height: 480px;
-	z-index: 100;
+	z-index: 99;
 }
 
 li {
@@ -296,8 +256,8 @@ li {
 	.tagsCloud {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		right: 10%;
+		top: 610px;
+		right: 5%;
 		margin: auto;
 
 	}
@@ -305,17 +265,21 @@ li {
 	.catalog {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		left: 8%;
+		top: 610px;
+		left: 5%;
 		margin: auto;
 	}
 
 	.code-editor {
+		margin-top: 40px;
 		width: 100%;
-  		height: 20rem;
+  		height: 24rem;
 	}
 
-
+	ol.linenums li {
+		font-size: 22px;
+  		line-height: 24px;
+	}
 }
 
 
@@ -325,7 +289,7 @@ li {
 		float: left;
 		position: absolute;
 		top: 0;
-		left: -10%;
+		left: -5%;
 		right: 0;	
 		margin: auto;
 	}
@@ -333,22 +297,28 @@ li {
 	.tagsCloud {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		right: 15%;
+		top: 610px;
+		right: 17%;
 		margin: auto;
 	}
 
 	.catalog {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
+		top: 610px;
 		left: 10%;
 		margin: auto;
 	}
 
 	.code-editor {
+		margin-top: 40px;
 		width: 40rem;
-  		height: 20rem;
+  		height: 22rem;
+	}
+
+	ol.linenums li {
+		font-size: 20px;
+  		line-height: 22px;
 	}
 }
 
@@ -366,22 +336,28 @@ li {
 	.tagsCloud {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		right: 25%;
+		top: 610px;
+		right: 20%;
 		margin: auto;
 	}
 
 	.catalog {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		left: 25%;
+		top: 610px;
+		left: 20%;
 		margin: auto;
 	}
 
 	.code-editor {
-		width: 36rem;
-  		height: 20rem;
+		margin-top: 40px;
+		width: 40rem;
+  		height: 22rem;
+	}
+
+	ol.linenums li {
+		font-size: 20px;
+  		line-height: 20px;
 	}
 }	
 
@@ -389,7 +365,7 @@ li {
 	.auto_print {
 		float: left;
 		position: absolute;
-		top: 0;
+		top: 45px;
 		left: -10%;
 		right: 0;	
 		margin: auto;
@@ -411,9 +387,64 @@ li {
 
 	.code-editor {
 		width: 34rem;
-  		height: 20rem;
+  		height: 30rem;
+	}
+
+	ol.linenums li {
+		font-size: 24px;
+  		line-height: 32px;
 	}
 }
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  /* Put your WebKit(Chrome) specific code here. */
+  	.list dd {
+	    border-top-width: 3px;
+	    border-top-style: dashed;
+	    border-top-color: rgba(255,255,255,0.3);
+	}
+
+	.list {
+		height: 300px;
+		width: 300px;
+	}
+
+	.list a:hover {
+    
+    text-indent: 20px;
+
+	}
+}
+
+@-moz-document url-prefix() {
+  /* Put your Firefox specific code here. */
+  	.list dd {
+	    
+	    border-top-width: 3px;
+    	border-top-color: rgba(255,255,255,0.3);
+	}
+
+	.list {
+		height: 200px;
+		width: 200px;
+	}
+
+	.catalog a:hover {
+    
+    text-indent: 20px;
+
+	}
+
+	.code-editor {
+		width: 34rem;
+  		height: 28rem;
+	}
+
+	ol.linenums li {
+		font-size: 20px;
+  		line-height: 32px;
+	}
+} 
 
 
 
