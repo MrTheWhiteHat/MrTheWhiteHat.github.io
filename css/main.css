@@ -283,14 +283,13 @@ li {
 	background-color: #00FFFF;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1080px) {
 	
 	.auto_print {
 		float: left;
 		position: absolute;
 		top: 0;
-		left: -16%;
-		right: 0;	
+		left: 0;			
 		margin: auto;
 	}
 	
@@ -319,39 +318,9 @@ li {
 
 }
 
-@media screen and (min-width: 841px) {
-	.auto_print {
-		float: left;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;	
-		margin: auto;
-	}
-	
-	.tagsCloud {
-		float: left;
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		right: 15%;
-		margin: auto;
-	}
 
-	.catalog {
-		float: left;
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 550px;
-		left: 10%;
-		margin: auto;
-	}
 
-	.code-editor {
-		width: 35rem;
-  		height: 20rem;
-	}
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1081px) {
 	.auto_print {
 		float: left;
 		position: absolute;
