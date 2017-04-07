@@ -318,7 +318,7 @@ a {
 	background-image:url(../images/earth.png);
 	
 	/*下面两句话，是解决问题的关键，决定着球是否围绕着一个圆心转，特别重要，浪费了好多时间*/
-	backgroud-position-x: center;
+	background-position-x: center;
 	background-position-y: center;
 	background-repeat: no-repeat;	
 	background-size: 100%;
