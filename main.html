@@ -218,7 +218,7 @@
 
 			<div class="tagsCloud" id="tagsCloud">
 				<div id="myCanvasContainer">
-			      <canvas width="360" height="360" id="myCanvas">
+			      <canvas width="320" height="320" id="myCanvas">
 			        <p>Anything in here will be replaced on browsers that support the canvas element</p>
 			      </canvas>
 			    </div>
@@ -242,6 +242,39 @@
 					<li><a href="#" data-weight = "20">其他</a></li>
 			      </ul>
 			    </div>
+			</div>
+
+			<div class="clock" id="clock">
+				<script type="text/javascript" src="./js/jquery.clock-1.1.0-min.js"></script>
+				<script>
+
+					var clock = $("#clock").clock(),
+						data = clock.data('clock');
+
+					// data.pause();
+					// data.start();
+					// data.setTime(new Date());
+
+					var d = new Date();
+					d.setHours(9);
+					d.setMinutes(51);
+					d.setSeconds(20);
+
+					/*var clock1 = $("#clock1").clock({
+						width: 210,
+						height: 305,
+						theme: 't2',
+						date: d
+					});
+
+					var clock2 = $("#clock2").clock({
+						width: 150,
+						height: 220,
+						theme: 't3'
+					});*/
+
+				</script>
+
 			</div>
 
 			<!--svg元素： 定义SVG文档片断-->

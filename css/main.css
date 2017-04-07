@@ -163,12 +163,21 @@ a {
 
 .tagsCloud {
 
-	width: 360px;
-	height: 360px;
-	
+	width: 320px;
+	height: 320px;	
 	z-index: 100;
 	background-color: rgba(255, 255, 255, 0.3);
 	border-radius: 18px;
+}
+
+.clock {
+	position: relative;
+    float: right;
+    top: 45px;
+	right: 6%; 
+    border: 1px dashed #dbd0a7;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .auto_print {
@@ -253,11 +262,17 @@ li {
 		margin: auto;
 	}
 	
-	.tagsCloud {
-		float: left;
+	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 610px;
-		right: 5%;
+		right: 8%;
+		margin: auto;
+	}
+
+	.tagsCloud {
+		position: absolute; /*固定，不随滚动条滚动*/
+		top: 930px;
+		right: 8%;
 		margin: auto;
 
 	}
@@ -266,7 +281,7 @@ li {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 610px;
-		left: 5%;
+		left: 8%;
 		margin: auto;
 	}
 
@@ -293,11 +308,17 @@ li {
 		right: 0;	
 		margin: auto;
 	}
-	
-	.tagsCloud {
-		float: left;
+
+	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 610px;
+		right: 17%;
+		margin: auto;
+	}
+	
+	.tagsCloud {
+		position: absolute; /*固定，不随滚动条滚动*/
+		top: 930px;
 		right: 17%;
 		margin: auto;
 	}
@@ -333,10 +354,16 @@ li {
 		margin: auto;
 	}
 	
-	.tagsCloud {
-		float: left;
+	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 610px;
+		right: 20%;
+		margin: auto;
+	}
+
+	.tagsCloud {
+		position: absolute; /*固定，不随滚动条滚动*/
+		top: 930px;
 		right: 20%;
 		margin: auto;
 	}
@@ -371,11 +398,17 @@ li {
 		margin: auto;
 	}
 	
-	.tagsCloud {
-		float: left;
+	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 45px;
-		right: 6%;
+		right: 8%;
+		margin: auto;
+	}
+
+	.tagsCloud {
+		position: absolute; /*固定，不随滚动条滚动*/
+		top: 366px;
+		right: 8%;
 		margin: auto;
 	}
 
