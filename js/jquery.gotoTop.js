@@ -34,9 +34,9 @@
 			}else{
 				controlLeft = $window.width()- opts.pageWidthJg-$this.width();
 			}
-			// var cssfixedsupport=$.browser.msie && parseFloat($.browser.version) < 7;//判断是否ie6
+			var cssfixedsupport= !$.support.leadingWhitespace;//判断是否ie6
 			var controlTop=$window.height() - $this.height()-opts.pageHeightJg;
-			// controlTop=cssfixedsupport ? $window.scrollTop() + controlTop : controlTop;
+			controlTop=cssfixedsupport ? $window.scrollTop() + controlTop : controlTop;
 			var shouldvisible=( $window.scrollTop() >= opts.startline )? true : false; // scrollTop() 方法返回或设置匹配元素的滚动条的垂直位置。
 			
 			if (shouldvisible){
@@ -46,23 +46,29 @@
 			}
 			
 			$this.css({ // css() 方法返回或设置匹配的元素的一个或多个样式属性。
-				position: /*cssfixedsupport ? 'absolute' : */ 'fixed',
+				position: cssfixedsupport ? 'absolute' : 'fixed',
 				bottom: 88,
 				right: 36
 			});
 		},30);
 		
 		$(this).click(function(event){
-			$body.stop().animate( { scrollTop: $(opts.targetObg).offset().top}, opts.duration); // stop() 方法用于在动画或效果完成前对它们进行停止。
-			$(this).blur(); 
-			// 当元素失去焦点时发生 blur 事件 例如 当输入域失去焦点 (blur) 时改变其颜色
-			// $("input").blur(function(){
-  			// $("input").css("background-color","#D6D6FF");
-			// });
-			event.preventDefault(); // preventDefault() 取消事件的默认动作
-			event.stopPropagation(); 
-			// 不再派发事件。
-			// 终止事件在传播过程的捕获、目标处理或起泡阶段进一步传播。调用该方法后，该节点上处理该事件的处理程序将被调用，事件不再被分派到其他节点。
+			if (navigator.userAgent.indexOf("Firefox") != -1) { // != -1 :才能判断出Firefox == 1 就判断不出来
+				$(this).click(function(){
+					$(window).scrollTop(0); // 终于解决Firefox浏览器点击不能到顶部的问题了，好伤， but Happy!
+				});
+			} else {
+				$body.stop().animate( { scrollTop: $(opts.targetObg).offset().top}, opts.duration); // stop() 方法用于在动画或效果完成前对它们进行停止。
+				$(this).blur(); 
+				// 当元素失去焦点时发生 blur 事件 例如 当输入域失去焦点 (blur) 时改变其颜色
+				// $("input").blur(function(){
+	  			// $("input").css("background-color","#D6D6FF");
+				// });
+				event.preventDefault(); // preventDefault() 取消事件的默认动作
+				event.stopPropagation(); 
+				// 不再派发事件。
+				// 终止事件在传播过程的捕获、目标处理或起泡阶段进一步传播。调用该方法后，该节点上处理该事件的处理程序将被调用，事件不再被分派到其他节点。
+			}
 		});
 	};
 	
@@ -75,7 +81,3 @@
 		targetObg:"body"//目标位置
 	};
 })(jQuery);
-
-$(function(){
-        $('<a href="#" class="gotoTop"><img src="./images/arrow-up.png" />回到顶部</a>').appendTo("body");
-});

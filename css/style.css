@@ -9,7 +9,7 @@ body
 	background:#fff;
 	color:#666;
 	font-size:14px;
-	font-family:"Microsoft YaHei", arial, tahoma;
+	font-family:"Microsoft YaHei", arial, tahoma; /*arial: 表示衬线*/
 	overflow:hidden;
 	position:relative;
 	margin: 0;
@@ -78,7 +78,7 @@ html, body {
 	padding-top: 6%;
 	font-size:40px;
 	color:#00FFFF;
-	font-family: "Microsoft YaHei";
+	font-family: "Times New Roman";
 	font-weight:bold;
 	position: absolute;
 	top: 0;

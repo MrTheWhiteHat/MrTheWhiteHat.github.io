@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html xmlns:wb="http://open.weibo.com/wb">
+<html xmlns:wb="http://open.weibo.com/wb" lang="zh-CN">
 	<head>
 		<title>Personal Blog Of Mr White</title>
 		<meta charset="utf-8">
@@ -19,6 +19,7 @@
 	    <script src="./js/jquery.min.js"></script>
 	    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 	    <script src="./js/tagcanvas.min.js" type="text/javascript"></script>
+	    <script src="./js/jquery.gotoTop.js" type="text/javascript"></script>
 
 	    <script type="text/javascript"> 
 			window.onload = function() {
@@ -94,11 +95,28 @@
 				}
 			}
 			checkBrowser();
+		</script>
+
+		<!--搞到大半夜啊！ 不知道为什么，这里回到顶部的js函数放在head标签内就是没法识别使用，放到后面才能使用，我也是醉了！！！-->
+
+			    
+	    <script type="text/javascript">
+			$(function(){
+				$(".gotoTop").goToTop();
+				$(window).bind('scroll resize',function(){
+					$(".gotoTop").goToTop();
+				});
+			});
 		</script>    
+
+		<style type="text/css">
+			.gotoTop{z-index: 101; background-color: rgba(0, 255, 255, 0.8); width: 40px; height: 90px; box-shadow: 0 0 20px 6px rgb(0, 255, 0);border-radius: 6px; font-size: 14px; text-align: center; color: #000; font: bold;} 
+		</style>
 
 	</head>
 	<body>
 		<div class = "content" id = "ct">
+			<a href="javascript:;" class="gotoTop"><img src="./images/arrow-up.png" />回到顶部</a>
 			<audio controls="controls" autoplay="autoplay" style="display: none;">
 				<source src="./audio/bgAudio.mp3" type="audio/mpeg">
 				<span style=" display: hidden;" >Your browser does not support the audio element.</span>
@@ -669,29 +687,13 @@
 		
 		<div class = "bg_img" id = "bi"></div>
 
-		<!--js脚本的位置特别重要，有的js需要文档加载完了之后，再加载js,才不会出错。这个3d的菜单就是得先加载完文档才有效果。搞了好久......-->
-
-		<script src='./js/jquery_draggable.js'></script>
-
-  		<script src="./js/jquery_draggable_call.js"></script>
-		
-		<script src="./js/3d-menu.js"></script>
-
-		<!--搞到大半夜啊！ 不知道为什么，这里回到顶部的js函数放在head标签内就是没法识别使用，放到最后才能使用，我也是醉了！！！-->
-
-		<script src="./js/jquery.gotoTop.js" type="text/javascript"></script>	    
-	    <script type="text/javascript">
-			$(function(){
-				$(".gotoTop").goToTop();
-				$(window).bind('scroll resize',function(){
-					$(".gotoTop").goToTop();
-				});
-			});
+		<script type="text/javascript">
+			
 		</script>
 
-		<style type="text/css">
-			.gotoTop{z-index: 100; background-color: rgba(0, 255, 255, 0.8); width: 40px; height: 90px; box-shadow: 0 0 20px 6px rgb(0, 255, 0);border-radius: 6px; font-size: 14px; text-align: center; color: #000; font: bold;} 
-		</style>	    	
+		<!--js脚本的位置特别重要，有的js需要文档加载完了之后，再加载js,才不会出错。这个3d的菜单就是得先加载完文档才有效果。搞了好久......-->
+		
+		<script src="./js/3d-menu.js"></script>
 
 	</body>
 </html>

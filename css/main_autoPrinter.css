@@ -20,7 +20,7 @@
 
 .com {
   color: #586175;
-  font-style: italic;
+  font-style: italic; /*italic: 字体变为斜体*/
 }
 
 .typ {
@@ -71,6 +71,7 @@
  * printed code snippets. */
 pre.prettyprint {
   padding: 0.5rem 0.5rem;
+
 }
 
 /* Specify class=linenums on a pre to get line numbering */
@@ -81,8 +82,7 @@ ol.linenums {
 }
 
 ol.linenums li {
-  margin: 0 0 0.3125rem 0.75rem;
-  word-spacing: 1px;
+  margin: 0 0 0.3125rem 0.75rem;  
   overflow: hidden;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -359,5 +359,5 @@ code.css {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
-  flex: 1;
+  flex: 1; /*Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性*/
 }
