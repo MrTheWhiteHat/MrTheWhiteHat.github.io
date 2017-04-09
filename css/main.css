@@ -6,7 +6,7 @@
 }
 
 html, body {
-	height: 220%;
+	height: 4000px;
 	width: 100%;
 	font-size: 16px;
 	font-family: arial, sans-serif;
@@ -51,9 +51,8 @@ h1 {
 
 span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
 
-	font-size: 22px;
 	font-family: "Times new Roman";
-	word-spacing: 5px;
+
 }
 
 /* List styles */
@@ -190,11 +189,21 @@ span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
 .clock {
 	position: relative;
     float: right;
-    top: 45px;
-	right: 6%; 
+    top: 45px; 
     border: 1px dashed #dbd0a7;
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+.TextSection {
+	height: 2080px;
+	background-color: rgba(255,255,255, 0.36);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 0 0 50px 20px #00ff14; /*制造div盒子box的阴影； 0\0 ：分别是水平垂直阴影的位置； 50px: 阴影的模糊距离；20px: 阴影的尺寸*/
+	border-radius: 10px 10px 0 0; /*制造圆角边*/
 }
 
 li {
@@ -262,51 +271,28 @@ li {
 	background-color: #00FFFF;
 }
 
-.TextSection {
-	height: 300%;
-	width: 85%;
-	background-color: rgba(255,255,255, 0.36);
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	box-shadow: 0 0 50px 20px #00ff14; /*制造div盒子box的阴影； 0\0 ：分别是水平垂直阴影的位置； 50px: 阴影的模糊距离；20px: 阴影的尺寸*/
-	border-radius: 10px 10px 0 0; /*制造圆角边*/
-
-
-}
-
-.whiteLine {
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-
 @media screen and (max-width: 1080px) {
 	
 	.auto_print {
 		float: left;
 		position: absolute;
 		top: 0;
-		left: 0;			
+		left: 0;
+		right: 0;			
 		margin: auto;
 	}
 	
 	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 610px;
-		right: 8%;
+		top: 810px;
+		right: 10%;
 		margin: auto;
 	}
 
 	.tagsCloud {
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 930px;
-		right: 8%;
+		top: 1130px;
+		right: 10%;
 		margin: auto;
 
 	}
@@ -314,20 +300,51 @@ li {
 	.catalog {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 610px;
+		top: 810px;
 		left: 8%;
 		margin: auto;
 	}
 
 	.code-editor {
 		margin-top: 40px;
-		width: 100%;
-  		height: 24rem;
+		width: 80%;
+  		height: 608px;
 	}
 
 	ol.linenums li {
+  		line-height: 28px;
+	}
+
+	.TextSection {
+		top: 1680px;
+		width: 80%;
+	}
+
+	#WL0 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 730px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	#WL1 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 1580px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	span {
 		font-size: 20px;
-  		line-height: 21px;
+		word-spacing: 5px;
 	}
 }
 
@@ -338,42 +355,74 @@ li {
 		float: left;
 		position: absolute;
 		top: 0;
-		left: -5%;
+		left: 0;
 		right: 0;	
 		margin: auto;
 	}
 
 	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 610px;
-		right: 17%;
+		top: 810px;
+		right: 10%;
 		margin: auto;
 	}
 	
 	.tagsCloud {
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 930px;
-		right: 17%;
+		top: 1130px;
+		right: 10%;
 		margin: auto;
 	}
 
 	.catalog {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 610px;
-		left: 10%;
+		top: 810px;
+		left: 8%;
 		margin: auto;
 	}
 
 	.code-editor {
 		margin-top: 40px;
-		width: 40rem;
-  		height: 22rem;
+		width: 80%;
+  		height: 608px;
 	}
 
 	ol.linenums li {
 		font-size: 20px;
-  		line-height: 22px;
+  		line-height: 28px;
+	}
+
+	.TextSection {
+		top: 1680px;
+		width: 80%;
+	}
+
+	#WL0 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 730px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	#WL1 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 1580px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	span {
+		font-size: 30px;
+		word-spacing: 12px;
 	}
 }
 
@@ -390,35 +439,66 @@ li {
 	
 	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 610px;
-		right: 20%;
+		top: 810px;
+		right: 10%;
 		margin: auto;
 	}
 
 	.tagsCloud {
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 930px;
-		right: 20%;
+		top: 1130px;
+		right: 10%;
 		margin: auto;
 	}
 
 	.catalog {
 		float: left;
 		position: absolute; /*固定，不随滚动条滚动*/
-		top: 610px;
-		left: 20%;
+		top: 810px;
+		left: 8%;
 		margin: auto;
 	}
 
 	.code-editor {
 		margin-top: 40px;
-		width: 688px;
+		width: 80%;
   		height: 608px;
 	}
 
 	ol.linenums li {
-		font-size: 20px;
-  		line-height: 20px;
+  		line-height: 28px;
+	}
+
+	.TextSection {
+		top: 1680px;
+		width: 80%;
+	}
+
+	#WL0 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 730px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	#WL1 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 1580px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	span {
+		font-size: 30px;
+		word-spacing: 10px;
 	}
 }	
 
@@ -434,20 +514,20 @@ li {
 	.clock {
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 45px;
-		right: 8%;
+		right: 7.5%;
 		margin: auto;
 	}
 
 	.tagsCloud {
 		position: absolute; /*固定，不随滚动条滚动*/
 		top: 366px;
-		right: 8%;
+		right: 7.5%;
 		margin: auto;
 	}
 
 	.catalog {
 		float: left;
-		left: 6%;
+		left: 5.3%;
     	top: 50px;
 	}
 
@@ -461,11 +541,30 @@ li {
 	}
 
 	.TextSection {
-		top: 120%;
+		top: 1080px;
+		width: 85%;
 	}
 
-	.whiteLine {
-		top: 110%;
+	#WL0 {
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		top: 900px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	#WL1 {
+		display: none;
+	}
+
+	span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
+
+		font-size: 22px;
+		word-spacing: 5px;
+
 	}
 }
 
