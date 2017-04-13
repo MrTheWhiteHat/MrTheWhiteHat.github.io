@@ -6,7 +6,7 @@
 }
 
 html, body {
-	height: 4000px;
+	height: 8000px;
 	width: 100%;
 	font-size: 16px;
 	font-family: arial, sans-serif;
@@ -47,6 +47,7 @@ h1 {
 	text-align: center;
 	text-decoration: underline;
 	color: #f1c232;
+	font-size: 36px;
 }
 
 span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
@@ -196,7 +197,7 @@ span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
 }
 
 .TextSection {
-	height: 2080px;
+	height: 5680px;
 	background-color: rgba(255,255,255, 0.36);
 	position: absolute;
 	left: 0;
@@ -204,6 +205,173 @@ span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
 	margin: auto;
 	box-shadow: 0 0 50px 20px #00ff14; /*制造div盒子box的阴影； 0\0 ：分别是水平垂直阴影的位置； 50px: 阴影的模糊距离；20px: 阴影的尺寸*/
 	border-radius: 10px 10px 0 0; /*制造圆角边*/
+	z-index: 100;
+}
+
+.code1 {
+		display: flex;	/*弹性布局*/
+		flex-direction: column; /*排列方向*/
+		flex-wrap: wrap; /*换行*/
+		text-align: center;
+		width: 80%;
+		position: relative; 	
+		/*相对位置是相对于其他
+		position 属性值的含义：
+		static
+		元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。
+		relative （保留原来的空间）
+		元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。
+		absolute（不保留原来的空间）
+		元素框从文档流完全删除，并相对于其包含块定位。包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。
+		fixed
+		元素框的表现类似于将 position 设置为 absolute，不过其包含块是视窗本身。
+		*/		
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+.hacker {
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(0, 255, 255, 0.2);	
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.Geeker {
+	color: #ffffb0;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(0, 255, 100, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.OS {
+	color: #ffff40;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(200, 150, 0, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.PD {
+	color: #ffff00;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(220, 250, 0, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.CP {
+	color: #d8ecd1;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(91, 218, 51, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+.NetProxy {
+	color: #e7a7a7;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(150, 0, 0, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.Security {
+	color: #eea6ee;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(0, 0, 100, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.google {
+	color: #f7bec9;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(255, 7, 55, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.CL {
+	color: #00ffff;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(0, 255, 255, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.WK {
+	color: #f6dada;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(244, 204, 204, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.Mov {
+	color: #5ff65f;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(255, 0, 255, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.GT {
+	color: #72e8a9;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(153, 0, 255, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.MC {
+	color: #ffaad1;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(229, 28, 120, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.NBA {
+	color: #c1db99;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(255, 153, 0, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.WA {
+	color: #f7b36b;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(230, 145, 56, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
+}
+
+.else {
+	color: #f7b0b0;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: rgba(152, 0, 0, 0.2);
+	border-radius: 20px;
+	border: 1px solid;
 }
 
 li {
@@ -389,7 +557,7 @@ li {
 	}
 
 	ol.linenums li {
-		font-size: 20px;
+		font-size: 22px;
   		line-height: 28px;
 	}
 

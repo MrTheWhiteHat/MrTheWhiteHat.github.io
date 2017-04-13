@@ -170,18 +170,18 @@ ol.linenums li {
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(11) {
-  -webkit-animation: typingNone 1s steps(3, end), blink-caret 1s step-end 2s;
-  animation: typingMid 1s steps(3, end), blink-caret 1s step-end 2s;
-  -webkit-animation-delay: 26s;
-  animation-delay: 26s;
+  -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
+  animation: typingMid 3s steps(22, end), blink-caret 1s step-end 2s;
+  -webkit-animation-delay: 28s;
+  animation-delay: 28s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .linenums > li:nth-child(12) {
   -webkit-animation: typingMid 3s steps(22, end), blink-caret 1s step-end infinite;
   animation: typingMid 3s steps(22, end), blink-caret 1s step-end infinite;
-  -webkit-animation-delay: 30s;
-  animation-delay: 30s;
+  -webkit-animation-delay: 31s;
+  animation-delay: 31s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
