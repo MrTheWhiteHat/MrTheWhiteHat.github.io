@@ -394,7 +394,7 @@ li {
 	font-size: 32px;
 	color: #00ffff;
 	text-align: center;
-	z-index: 100;
+	z-index: 99;
 }
 
 .copyright1 {

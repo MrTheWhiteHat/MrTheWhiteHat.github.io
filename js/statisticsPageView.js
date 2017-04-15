@@ -50,13 +50,23 @@
 		}
 	}
 	var now = new Date()
+	var arr = new Array()
+	var ip, i	
 	fixDate(now)
 	now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
 	var visits = getCookie("counter")
-	if (!visits) {
+	if (!visits) { // visits = false / 0
 		visits = 1;
-	} else {
+		ip = returnCitySN['cip'];
+		i = 0;
+		arr.push(ip);
+		i += 1;
+	} else if (arr[i-1] != returnCitySN['cip']) {
 		visits = parseInt(visits) + 1;
-	}
+		ip = returnCitySN['cip'];
+		arr.push(ip);
+		i += 1;
+	} else {}			  				
 	setCookie("counter", visits, now)
-	document.write("本页面被访问<i>" + visits + "</i>次！") 
+	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
+	document.write("<br> 本页面被访问<i>" + visits + "</i>次！") 
