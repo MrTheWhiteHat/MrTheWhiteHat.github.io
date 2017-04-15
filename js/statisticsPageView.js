@@ -49,22 +49,29 @@
 			date.setTime(date.getTime() - skew) // setTime() 以毫秒设置 Date 对象。
 		}
 	}
+
+	function contains(arr, obj) {  // 判断对象是否在数组内
+	    var i = arr.length;  
+	    while (i--) {  
+	        if (arr[i] === obj) {  
+	            return true;  
+	        }  
+	    }  
+	    return false;  
+	} 
+
 	var now = new Date()
 	var arr = new Array()
-	var ip, i	
+	var ip = returnCitySN['cip']	
 	fixDate(now)
 	now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
 	var visits = getCookie("counter")
 	if (!visits) { // visits = false / 0
 		visits = 1;
-		ip = returnCitySN['cip'];
-		i = 0;
 		arr.push(ip);
-	} else if (arr[i] != returnCitySN['cip']) {
+	} else if (visits && !contains(arr, ip)) {
 		visits = parseInt(visits) + 1;
-		ip = returnCitySN['cip'];
 		arr.push(ip);
-		i += 1;
 	} else {}			  				
 	setCookie("counter", visits, now)
 	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
