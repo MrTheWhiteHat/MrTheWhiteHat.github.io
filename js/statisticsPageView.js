@@ -59,4 +59,4 @@
 		visits = parseInt(visits) + 1;
 	}
 	setCookie("counter", visits, now)
-	document.write("您是到访的第<i>" + visits + "</i>位用户！") 
+	document.write("本页面被访问<i>" + visits + "</i>次！") 
