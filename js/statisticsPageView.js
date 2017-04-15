@@ -60,8 +60,7 @@
 		ip = returnCitySN['cip'];
 		i = 0;
 		arr.push(ip);
-		i += 1;
-	} else if (arr[i-1] != returnCitySN['cip']) {
+	} else if (arr[i] != returnCitySN['cip']) {
 		visits = parseInt(visits) + 1;
 		ip = returnCitySN['cip'];
 		arr.push(ip);
