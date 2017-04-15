@@ -1,7 +1,7 @@
 
 	var caution = false // caution： 谨慎
 
-	function setCookie(name, value, expires, path, domain, secure, ip) {
+	function setCookie(name, value, expires, ip, path, domain, secure) {
 		var curCookie = name + "=" + escape(value) +	// escape() 函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。
 			((expires) ? ";expires=" + expires.toGMTString() : "") + // toGMTString() 方法可根据格林威治时间 (GMT) 把 Date 对象转换为字符串，并返回结果。
 			((path) ? "; path=" + path : "") +
@@ -76,4 +76,4 @@
 	} else {}			  				
 	setCookie("counter", visits, now, arr)
 	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
-	document.write("<br> 本页面被访问<i>" + visits + "</i>次！") 
+	document.write("<br> 您第<i>" + visits + "</i>次访问本页面！") 
