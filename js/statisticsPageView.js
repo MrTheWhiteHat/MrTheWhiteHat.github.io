@@ -1,12 +1,13 @@
 
 	var caution = false // caution： 谨慎
 
-	function setCookie(name, value, expires, path, domain, secure) {
+	function setCookie(name, value, expires, path, domain, secure, ip) {
 		var curCookie = name + "=" + escape(value) +	// escape() 函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。
 			((expires) ? ";expires=" + expires.toGMTString() : "") + // toGMTString() 方法可根据格林威治时间 (GMT) 把 Date 对象转换为字符串，并返回结果。
 			((path) ? "; path=" + path : "") +
 			((domain) ? "; domain=" + domain : "") +
-			((secure) ? ";secure" : "") 
+			((secure) ? ";secure" : "") +
+			((ip) ? ";ip=" + ip : "") // cookie是以分号隔开的一串字符，ip这个参数是否赋值，如果赋值就将ip参数的值赋给";ip=",也就是向cookie中添加这个ip字符选项。
 		if (!caution || (name + "=" + escape(value)).length <= 4000) { // length 属性可设置或返回数组中元素的数目
 			document.cookie = curCookie // document: 是HTML DOM 对象， cookie是这个对象的属性，设置或返回与当前文档有关的所有cookie。
 		} else if (confirm("Cookie exceeds 4KB and will be cut!")) { // confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框，属于HTML　DOM　window对象下的方法
@@ -73,6 +74,6 @@
 		visits = parseInt(visits) + 1;
 		arr.push(ip);
 	} else {}			  				
-	setCookie("counter", visits, now)
+	setCookie("counter", visits, now, arr)
 	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
 	document.write("<br> 本页面被访问<i>" + visits + "</i>次！") 
