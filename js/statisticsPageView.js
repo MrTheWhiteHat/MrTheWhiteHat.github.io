@@ -4,10 +4,11 @@
 	function setCookie(name, value, expires, ip, path, domain, secure) {
 		var curCookie = name + "=" + escape(value) +	// escape() 函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。
 			((expires) ? ";expires=" + expires.toGMTString() : "") + // toGMTString() 方法可根据格林威治时间 (GMT) 把 Date 对象转换为字符串，并返回结果。
+			((ip) ? ";ip=" + ip : "") + // cookie是以分号隔开的一串字符，ip这个参数是否赋值，如果赋值就将ip参数的值赋给";ip=",也就是向cookie中添加这个ip字符选项。
 			((path) ? "; path=" + path : "") +
 			((domain) ? "; domain=" + domain : "") +
-			((secure) ? ";secure" : "") +
-			((ip) ? ";ip=" + ip : "") // cookie是以分号隔开的一串字符，ip这个参数是否赋值，如果赋值就将ip参数的值赋给";ip=",也就是向cookie中添加这个ip字符选项。
+			((secure) ? ";secure" : "")
+			 
 		if (!caution || (name + "=" + escape(value)).length <= 4000) { // length 属性可设置或返回数组中元素的数目
 			document.cookie = curCookie // document: 是HTML DOM 对象， cookie是这个对象的属性，设置或返回与当前文档有关的所有cookie。
 		} else if (confirm("Cookie exceeds 4KB and will be cut!")) { // confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框，属于HTML　DOM　window对象下的方法
@@ -32,6 +33,20 @@
 		return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex)) // 提取字首与“;”之间的字符串进行解码
 		// unescape() 函数可对通过 escape() 编码的字符串进行解码
 		// substring() 方法用于提取字符串中介于两个指定下标之间的字符
+	}
+
+	function getIP(name) {
+		var prefix = ";ip="
+		var cookieStartIndex = document.cookie.indexOf(prefix)
+		if (cookieStartIndex == -1) {
+			return null
+		}
+		var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+		if (cookieEndIndex == -1) {
+			cookieEndIndex = document.cookie.length
+		}
+
+		return (document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
 	}
 
 	function deleteCookie(name, path, domain) {
@@ -63,17 +78,23 @@
 
 	var now = new Date()
 	var arr = new Array()
+	var str = "0.0.0.0"
+
+	console.log(str);
+	console.log(arr);
 	var ip = returnCitySN['cip']	
 	fixDate(now)
 	now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
 	var visits = getCookie("counter")
+	arr = str.split(","); // 将字符串转化成数组
 	if (!visits) { // visits = false / 0
 		visits = 1;
 		arr.push(ip);
 	} else if (!contains(arr, ip)) {
-		visits = parseInt(visits) + 1;
+		visits = parseInt(visits) + 1;  
 		arr.push(ip);
-	} else {}			  				
-	setCookie("counter", visits, now, arr)
-	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
+	} else {}
+	str = arr.join(","); // 将数组转化成字符串			  				
+	setCookie("counter", visits, now, str)
+	document.write("您的IP为<i>  " + ip + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
 	document.write("<br> 您第<i>" + visits + "</i>次访问本页面！") 
