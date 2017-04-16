@@ -70,7 +70,7 @@
 	if (!visits) { // visits = false / 0
 		visits = 1;
 		arr.push(ip);
-	} else if (visits && contains(arr, ip)) {
+	} else if (!contains(arr, ip)) {
 		visits = parseInt(visits) + 1;
 		arr.push(ip);
 	} else {}			  				
