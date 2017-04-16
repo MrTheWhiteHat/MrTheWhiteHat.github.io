@@ -76,25 +76,17 @@
 	    return false;  
 	} 
 
-	var now = new Date()
-	var arr = new Array()
-	var str = "0.0.0.0"
-
-	console.log(str);
-	console.log(arr);
-	var ip = returnCitySN['cip']	
+	var now = new Date()	
 	fixDate(now)
 	now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
 	var visits = getCookie("counter")
-	arr = str.split(","); // 将字符串转化成数组
+	//arr = str.split(","); // 将字符串转化成数组
 	if (!visits) { // visits = false / 0
 		visits = 1;
-		arr.push(ip);
-	} else if (!contains(arr, ip)) {
+	} else {
 		visits = parseInt(visits) + 1;  
-		arr.push(ip);
-	} else {}
-	str = arr.join(","); // 将数组转化成字符串			  				
-	setCookie("counter", visits, now, str)
-	document.write("您的IP为<i>  " + ip + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
+	}
+	//str = arr.join(","); // 将数组转化成字符串			  				
+	setCookie("counter", visits, now)
+	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
 	document.write("<br> 您第<i>" + visits + "</i>次访问本页面！") 
