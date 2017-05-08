@@ -359,6 +359,9 @@ div.menuitems a {
     font-size: 20px;
 }
 div.menuitems:hover {
+    box-shadow: -1px 1px 3px 3px #00ffff;
     text-indent: 12px;
-    background-color : rgba(0, 255, 255, 0.9);
+    border-radius: 6px;
+    background-color : rgba(255, 255, 255, 1);
+}
 }
