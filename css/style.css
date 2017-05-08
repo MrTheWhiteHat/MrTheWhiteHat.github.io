@@ -330,7 +330,6 @@ html, body {
 
 /*右键点击功能皮肤*/
 .skin {
-	display: block;
     width : 200px;
     height: 300px;
     border : 3px solid green;
@@ -342,6 +341,7 @@ html, body {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 100;
+    text-align: left;
 }
 
 hr {
@@ -350,13 +350,15 @@ hr {
 }
 
 div.menuitems {
-    margin : 1px 0;
+    margin : 1px 6px;
 }
 div.menuitems a {
-	line-height: 35px;
+	font-family: "Times new Roman";
+    line-height: 35px;
     text-decoration : none;
-    color: #ffffff;
+    color: #00ffff;
     font-size: 20px;
+    font-weight: bold;
 }
 div.menuitems:hover {
     box-shadow: -1px 1px 3px 3px #00ffff;
@@ -364,4 +366,4 @@ div.menuitems:hover {
     border-radius: 6px;
     background-color : rgba(255, 255, 255, 1);
 }
-}
+
