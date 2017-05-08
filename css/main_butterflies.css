@@ -708,3 +708,60 @@
   height: 0;
   width: 0;
 }
+
+/*-----------------------自定义的css----------------------*/
+
+* {
+  margin: 0px;   /*外边距*/
+  padding: 0px;  /*内边距*/
+}
+
+span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
+
+  font-family: "Times new Roman";
+
+}
+
+li {
+
+  list-style-type: none;
+}
+
+/*右键点击功能皮肤*/
+.skin {
+    width : 200px;
+    height: 300px;
+    border : 3px solid green;
+    padding : 10px;
+    visibility : hidden;
+    position : absolute;
+    box-shadow: -10px 10px 10px #00ff00;
+    color: #0000ff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+hr {
+
+  color:#0000ff ;
+
+}
+
+div.menuitems {
+    margin : 1px 6px;
+}
+div.menuitems a {
+    font-family: "Times new Roman";
+    line-height: 35px;
+    text-decoration : none;
+    color: #00ffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+div.menuitems:hover {
+    box-shadow: -1px 1px 3px 3px #00ffff;
+    text-indent: 12px;
+    border-radius: 6px;
+    background-color : rgba(255, 255, 255, 1);
+}

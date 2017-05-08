@@ -81,3 +81,10 @@
 		targetObg:"body"//目标位置
 	};
 })(jQuery);
+
+$(function(){
+	$(".gotoTop").goToTop();
+	$(window).bind('scroll resize',function(){
+		$(".gotoTop").goToTop();
+	});
+});

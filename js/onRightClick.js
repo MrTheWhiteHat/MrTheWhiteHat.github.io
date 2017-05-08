@@ -46,18 +46,18 @@ function onRightClick() {
 
         /*如果从鼠标位置到容器右边的空间小于菜单的宽度，就定位菜单的左坐标（Left）为当前鼠标位置向左一个菜单宽度*/
         if (rightedge < menu.offsetWidth) {//  offsetHeight 是自身元素的宽度            
-            menu.style.left = /*container.scrollLeft + */mousePos.x - menu.offsetWidth + "px"; 
+            menu.style.left = /*container.scrollLeft + */mousePos.x - menu.offsetWidth + 5 + "px"; 
             // console.log(container.scrollLeft) // container对象左边距窗口左边的距离
         }   else {
         /*否则，就定位菜单的左坐标为当前鼠标位置*/
-            menu.style.left = /*container.scrollLeft + */mousePos.x + 12 + "px";
+            menu.style.left = /*container.scrollLeft + */mousePos.x - 5 + "px";
         }    
         /*如果从鼠标位置到容器下边的空间小于菜单的高度，就定位菜单的上坐标（Top）为当前鼠标位置向上一个菜单高度*/
         if (bottomedge < menu.offsetHeight)
-            menu.style.top = /*container.scrollLeft + */mousePos.y  - menu.offsetHeight + "px";
+            menu.style.top = /*container.scrollLeft + */mousePos.y  - menu.offsetHeight + 5 + "px";
         else
         /*否则，就定位菜单的上坐标为当前鼠标位置*/
-            menu.style.top =  mousePos.y + "px";
+            menu.style.top =  mousePos.y - 5 + "px";
              
         /*设置菜单可见*/
         menu.style.visibility = "visible";             
@@ -70,5 +70,5 @@ function onRightClick() {
 
     LTEvent.addListener(container,"contextmenu",LTEvent.cancelBubble);
     LTEvent.addListener(container,"contextmenu",showMenu);
-    LTEvent.addListener(document,"click",hideMenu);                    
+    LTEvent.addListener(menu,"mouseleave",hideMenu); // 给元素增加事件的监听             
 }

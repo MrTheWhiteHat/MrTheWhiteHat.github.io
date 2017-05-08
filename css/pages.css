@@ -6,7 +6,7 @@
 }
 
 html, body {
-	height: 6966px;
+	height: 8000px;
 	width: 100%;
 	font-size: 16px;
 	font-family: arial, sans-serif;
@@ -61,11 +61,6 @@ span { /*用这个css属性才解决autoPrinter的问题啊醉了*/
 
 }
 
-li {
-
-	list-style-type: none;
-}
-
 iframe {
 	position: fixed;	
 	width: 100%;
@@ -78,148 +73,57 @@ iframe {
 	z-index: 99;
 }
 
-/* List styles */
 
-.list {
+.header ol{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    
-    text-transform: uppercase; /* 全部转换成大写 */
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-    height: 300px;
-    width: 300px;
 }
 
-.list a {
-    
-    display: block;
-    
+.header ol li {
+
+	width: 100px;
+	list-style-type: none;
+	line-height: 30px;
 }
 
-.list_top {
-
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px;
-    
-    line-height: 50px;
-    background: #E0FBAC;
-    margin: 0;
-    height: 50px;
-    width: 200px;
-    color: #fff;
-
-    -webkit-transform: translateZ(0.3px);
-    -moz-transform: translateZ(0.3px);
-    -ms-transform: translateZ(0.3px);
-    -o-transform: translateZ(0.3px);
-    transform: translateZ(0.3px);
-
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 30px;
-
-	} 
-
-.list dd {
-
-    text-indent: 10px;
-    background: #E0FBAC;
-    margin: 0;   
-    width: 200px;
-    color: #fff;
-    line-height: 30px;
-    font-size: 20px;
-    height: 30px;
+.header ol span {
+	width: 100%;
+	line-height: 40px;
 }
 
-/* UI */
-
-.toggle {
-  
-    -webkit-transform: translateZ(100px);
-    -moz-transform: translateZ(100px);
-    -ms-transform: translateZ(100px);
-    -o-transform: translateZ(100px);
-    transform: translateZ(100px);
-
-    box-shadow: 3px 6px 2px rgba(0,0,0,0.3);
-    border-radius: 8px;
-    line-height: 25px;
-    background: #6495ED;
-    font-size: 16px;
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    right: 0; 
-    height: 25px;   
-    width: 40px;
-    color: #fff; 
-}
-
-.toggle:hover {
-    
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.catalog_words {
-	font-size: 30px;
+.header {
+	position: absolute;
+	height: 130px;
+	width: 85%;
+	z-index: 101;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	background-color: #33ff33;
+	font-family: "Times new Roman";
+	font-size: 20px;
 	font-weight: bold;
-	color: #000080;
+	color: #000000;
+	text-align: center;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	box-shadow: 0px 0px 6px 6px #fff;
 }
 
-.catalog dt, .catalog dd, .catalog a { background: 	#33ff33; font-size: 18px; color: #000000; }
-
-.catalog a:hover { background: #C1FFC1; }
-
-.catalog {
-
-    -webkit-transform: perspective(1200px) rotateY(40deg) !important;
-    -moz-transform: perspective(1200px) rotateY(40deg) !important;
-    -ms-transform: perspective(1200px) rotateY(40deg) !important;
-    -o-transform: perspective(1200px) rotateY(40deg) !important;
-    transform: perspective(1200px) rotateY(40deg) !important;
-
-    -webkit-transform-origin: 110% 25%;
-    -moz-transform-origin: 110% 25%;
-    -ms-transform-origin: 110% 25%;
-    -o-transform-origin: 110% 25%;
-    transform-origin: 110% 25%;
-
-    z-index: 100;
-
+.header a {
+	color: blue;
 }
 
-.code-editor {
-	box-shadow: 0 0 20px 15px rgba(0, 255, 0, 0.66);
-}
-
-.tagsCloud {
-
-	width: 320px;
-	height: 320px;	
-	z-index: 100;
-	background-color: rgba(255, 255, 255, 0.3);
-	border-radius: 18px;
-}
-
-.clock {
-	position: relative;
-    float: right;
-    top: 45px; 
-    border: 1px dashed #dbd0a7;
-    border-radius: 18px;
-    background-color: rgba(255, 255, 255, 0.3);
+.header a:hover {
+	color: #00ffff;
 }
 
 .TextSection {
-	height: 4900px;
+	height: 7080px;
 	background-color: rgba(255,255,255, 0.36);
 	position: absolute;
 	left: 0;
@@ -236,7 +140,7 @@ iframe {
 	flex-wrap: wrap; /*换行*/
 	text-align: center;
 	width: 80%;
-	position: relative; 	
+	position: relative; 		
 	/*相对位置是相对于其他
 	position 属性值的含义：
 	static
@@ -253,9 +157,60 @@ iframe {
 	margin: auto;
 }
 
-.code1 a:hover {
-	background-color: rgba(0,0,0, 0.66);
+.code1 #title1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 24px;
+	margin: auto;
+	width: 100%;
 }
+
+.code2 {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 60px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.code2 #title2 {
+	text-align: center;
+	height: 24px;
+	width: 100%;
+	color: #fff;
+	font-size: 20px;
+}
+
+.code2 a {
+	height: 26px;
+	color: #fff;
+	font-size: 20px;
+	border-bottom: solid 1px;
+}
+
+.code2 a:hover {
+	color: #00FFFF;
+}
+
+.links {
+	width: 100%;
+	position: relative;
+	top: 8px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 101;
+	box-shadow: 0px 0px 12px 6px #fff inset;
+	border-radius: 6px;
+	overflow-y: auto;
+}
+
+
 
 .hacker {
 	color: #fff;
@@ -264,6 +219,7 @@ iframe {
 	background-color: rgba(0, 255, 255, 0.2);	
 	border-radius: 20px;
 	border: 1px solid;
+	width: 1000px;
 }
 
 .Geeker {
@@ -271,15 +227,6 @@ iframe {
 	font-size: 22px;
 	font-weight: bold;
 	background-color: rgba(0, 255, 100, 0.2);
-	border-radius: 20px;
-	border: 1px solid;
-}
-
-.OC {
-	color: #ff6040;
-	font-size: 22px;
-	font-weight: bold;
-	background-color: rgba(255, 200, 150, 0.8);
 	border-radius: 20px;
 	border: 1px solid;
 }
@@ -415,7 +362,7 @@ iframe {
 	height: 300px;
 	background-color: rgba(255, 255, 255, 0.3);
 	position: absolute;
-	top: 6666px;
+	top: 7700px;
 	font-family: "Times new Roman";
 	font-size: 32px;
 	color: #00ffff;
@@ -502,12 +449,11 @@ iframe {
 }
 
 .arrow_down {
-	z-index: 101; 
+	z-index: 102; 
 	width: 48px; 
 	height: 48px; 
-	box-shadow: 0 0 6px 6px rgb(255, 255, 255);
-	border-radius: 30px; 
-	font-size: 14px; 
+	box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.88);
+	border-radius: 30px;  
 	text-align: center; 
 	color: #000; 
 	font: bold;
@@ -564,50 +510,8 @@ div.menuitems:hover {
 
 @media screen and (max-width: 1080px) {
 	
-	.auto_print {
-		float: left;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;			
-		margin: auto;
-	}
-	
-	.clock {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 810px;
-		right: 10%;
-		margin: auto;
-	}
-
-	.tagsCloud {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 1130px;
-		right: 10%;
-		margin: auto;
-
-	}
-
-	.catalog {
-		float: left;
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 810px;
-		left: 8%;
-		margin: auto;
-	}
-
-	.code-editor {
-		margin-top: 40px;
-		width: 80%;
-  		height: 608px;
-	}
-
-	ol.linenums li {
-  		line-height: 28px;
-	}
-
 	.TextSection {
-		top: 1680px;
+		top: 280px;
 		width: 80%;
 	}
 
@@ -642,50 +546,9 @@ div.menuitems:hover {
 
 
 @media screen and (min-width: 1081px) {
-	.auto_print {
-		float: left;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;	
-		margin: auto;
-	}
-
-	.clock {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 810px;
-		right: 10%;
-		margin: auto;
-	}
-	
-	.tagsCloud {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 1130px;
-		right: 10%;
-		margin: auto;
-	}
-
-	.catalog {
-		float: left;
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 810px;
-		left: 8%;
-		margin: auto;
-	}
-
-	.code-editor {
-		margin-top: 40px;
-		width: 80%;
-  		height: 608px;
-	}
-
-	ol.linenums li {
-		font-size: 22px;
-  		line-height: 28px;
-	}
 
 	.TextSection {
-		top: 1680px;
+		top: 280px;
 		width: 80%;
 	}
 
@@ -719,49 +582,9 @@ div.menuitems:hover {
 
 
 @media screen and (min-width: 1200px) {
-	.auto_print {
-		float: left;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;	
-		margin: auto;
-	}
-	
-	.clock {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 810px;
-		right: 10%;
-		margin: auto;
-	}
-
-	.tagsCloud {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 1130px;
-		right: 10%;
-		margin: auto;
-	}
-
-	.catalog {
-		float: left;
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 810px;
-		left: 8%;
-		margin: auto;
-	}
-
-	.code-editor {
-		margin-top: 40px;
-		width: 80%;
-  		height: 608px;
-	}
-
-	ol.linenums li {
-  		line-height: 28px;
-	}
 
 	.TextSection {
-		top: 1680px;
+		top: 280px;
 		width: 80%;
 	}
 
@@ -794,45 +617,9 @@ div.menuitems:hover {
 }	
 
 @media screen and (min-width: 1448px) {
-	.auto_print {
-		position: absolute;
-		top: 36px;
-		left: -9%;
-		right: 0;	
-		margin: auto;
-	}
-	
-	.clock {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 45px;
-		right: 7.5%;
-		margin: auto;
-	}
-
-	.tagsCloud {
-		position: absolute; /*固定，不随滚动条滚动*/
-		top: 366px;
-		right: 7.5%;
-		margin: auto;
-	}
-
-	.catalog {
-		float: left;
-		left: 5.3%;
-    	top: 50px;
-	}
-
-	.code-editor {
-		width: 688px;
-  		height: 608px;
-	}
-
-	ol.linenums li {  		
-  		line-height: 32px;
-	}
 
 	.TextSection {
-		top: 1080px;
+		top: 280px;
 		width: 85%;
 	}
 
@@ -861,39 +648,12 @@ div.menuitems:hover {
 
 @media (-webkit-min-device-pixel-ratio: 0) {
   /* Put your WebKit(Chrome) specific code here. */
-  	.list dd {
-	    border-top-width: 3px;
-	    border-top-style: dashed;
-	    border-top-color: rgba(255,255,255,0.3);
-	}
-
-	.list {
-		height: 300px;
-		width: 300px;
-	}
-
-	.list a:hover {
-    
-    text-indent: 20px;
 
 	}
 }
 
 @-moz-document url-prefix() {
   /* Put your Firefox specific code here. */
-  	.list dd {
-	    border-top-width: 3px;
-    	border-top-color: rgba(255,255,255,0.3);
-	}
-
-	.list {
-		height: 360px;
-		width: 200px;
-	}
-
-	.catalog a:hover {
-    
-    	text-indent: 20px;
 
 	}
 } 

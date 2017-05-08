@@ -2,142 +2,40 @@
 <html xmlns:wb="http://open.weibo.com/wb" lang="zh-CN">
 	<head>
 		<title>Personal Blog Of Mr White</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="renderer" content="webkit">
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!--meta name="viewport" content="width=device-width"/-->
+	    <meta name="renderer" content="webkit"/>
 	    <meta name="keywords" content="Hack/Hacker, Geek/Geeker, C, C++, C#, Java, Python, PHP, Perl, Ruby, html, css, javascript, Penetration, Windows, Linux, Kali Linux, 黑客, 极客, 网站渗透, 操作系统, 逆向工程, 漏洞查找, 网络安全, 全栈工程师">
-	    <meta name="description" content="努力学习，渴望成为一名以安全为首要的条件的全栈开发工程师。I'm  learning hard to become a full stack developer who takes safety as the primary condition.">
+	    <meta name="description" content="努力学习，渴望成为一名以安全为首要的条件的全栈开发工程师。I'm  learning hard to become a full stack developer who takes safety as the primary condition."/>
 
 	    <meta property="wb:webmaster" content="6ea07d84e47c2cce" />  <!--新浪微博的分享接入AppKey-->
 
-	    <link rel="stylesheet" href="./css/normalize.css">
+	    <link rel="stylesheet" href="./css/normalize.css"/>
 	    <link rel="stylesheet" href="./css/main_autoPrinter.css" media="screen" type="text/css" />
-	    <link rel="stylesheet" href="css/main_butterflies.css" media="screen" type="text/css" />
+	    <link rel="stylesheet" href="./css/main.css" media = "screen" type="text/css"/>
 	    <link rel="icon" href="./images/titleicon.png" type="image/x-icon"/>
-	    <link rel="stylesheet" type="text/css" href="./css/main.css" media = "screen"/>
 	    
 	    <script src="./js/jquery.min.js"></script>
 	    <!--script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script-->
-	    <script src="./js/tagcanvas.min.js" type="text/javascript"></script>
-	    <script src="./js/jquery.gotoTop.js" type="text/javascript"></script>
+	    <script type="text/javascript" src="./js/tagcanvas.min.js"></script>
 	    <script type="text/javascript" src="./js/rightClick.js"></script>
 	    <script type="text/javascript" src="./js/onRightClick.js"></script>
-
-	    <script type="text/javascript"> 
-			
-			window.onload = function() {
-
-				onRightClick();
-				
-				try {
-					TagCanvas.Start('myCanvas', 'tags', {
-						textColour: '#87CEFA',
-						outlineColour: '#ff00ff',
-						reverse: true,
-						depth: 1,
-						maxSpeed: 0.06,
-						shape: "sphere",
-	  					weight: true,
-	  					weightMode: "both",
-	  					weightFrom: "data-weight",
-	  					weightGradient: {
-							
-							0:    '#f00', // red
-							0.33: '#ff0', // yellow
-							0.66: '#0f0', // green
-							1:    '#00f',  // blue
-
-	  					},
-	  					zoomMin: 0.8,
-	  					zoomMax: 1.2,
-	  					shuffleTags: true, // 随机排列
-	  					shadow: "#0f0", // 每个标签后面的阴影
-	  					shadowBlur: 3, //标记阴影模糊量
-	  					pulsateTo: 0.2,
-	  					pulsateTime: 3,
-	  					pinchZoom: true,
-	  					textFont: 'Impact,"Arial Black",sans-serif',
-	  					outlineColour: 'rgba(0, 0, 0, 0.333)',
-	  					outlineMethod: "block"
-
-					});
-
-					/*禁用F12 keyCode == 123 是F12的键盘码*/
-					document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
-						// onkeydown 事件会在用户按下一个键盘按键时发生。
-						// onkeyup	某个键盘按键被松开。
-						// onkeypress 某个键盘按键被按下并松开。
-						if(window.event.keyCode == 123) { 
-							window.event.returnValue=false;
-							return(false); 
-						} 
-					}
-					
-				} catch (e) {
-					// something went wrong, hide the canvas container
-					document.getElementById('myCanvasContainer').style.display = 'none';
-				}
-			};
-	    </script>
-
-	    <script type="text/javascript">
-			// js检查浏览器类型与版本
-			function checkBrowser() {
-				
-				if(navigator.userAgent.indexOf("Opera") != -1) { 
-					alert('Opera'); 
-				} else if(navigator.userAgent.indexOf("MSIE") != -1) { 
-					alert('您的IE浏览器不受本站点支持，请使用Chrome，Firefox, Opera等浏览器');
-					window.opener=null;
-     				window.open('','_self');
-     				window.close();
-				} else if(navigator.userAgent.indexOf("Firefox") != -1) { 
-					
-				} else if(navigator.userAgent.indexOf("Netscape") != -1) { 
-					 
-				} else if(navigator.userAgent.indexOf("Chrome") != -1) { 
-					 
-				} else if(navigator.userAgent.indexOf("Safari") != -1) {
-					 
-				} else if(navigator.userAgent.indexOf("Edge") != -1) {
-					
-				}else { 
-					alert('您的Edge浏览器不受本站点支持，请使用Chrome，Firefox, Opera等浏览器');
-					
-					// 窗口自动关闭
-					
-					window.opener=null;
-     				window.open('','_self');
-     				window.close();  
-				}
-			}
-			checkBrowser();
-		</script>
-
-		<!--搞到大半夜啊！ 不知道为什么，这里回到顶部的js函数放在head标签内就是没法识别使用，放到后面才能使用，我也是醉了！！！-->
-
-			    
-	    <script type="text/javascript">
-			$(function(){
-				$(".gotoTop").goToTop();
-				$(window).bind('scroll resize',function(){
-					$(".gotoTop").goToTop();
-				});
-			});
-		</script>    
-
-		<style type="text/css">
-			.gotoTop{z-index: 101; background-color: rgba(0, 255, 255, 0.8); width: 40px; height: 90px; box-shadow: 0 0 20px 6px rgb(0, 255, 0);border-radius: 6px; font-size: 14px; text-align: center; color: #000; font: bold;} 
-		</style>
+	    <script type="text/javascript" src="./js/jquery.gotoTop.js"></script>	    
+	    <script type="text/javascript" src="./js/checkBrowser.js"></script>
+	    <script type="text/javascript" src="./js/main_onload.js"></script>   
 
 	</head>
 	<body id="bd">
 		<div class = "content" id = "ct">
-			<a href="javascript:;" class="gotoTop"><img src="./images/arrow-up.png" />回到顶部</a>
-			<audio controls="controls" autoplay="autoplay" style="display: none;">
-				<source src="./audio/bgAudio.mp3" type="audio/mpeg">
-				<span style=" display: hidden;" >Your browser does not support the audio element.</span>
-			</audio>
+			
+			<a href="javascript:;" class="gotoTop"><img src="./images/arrow_up.png" />回到顶部</a>
+			<a href="javascript:;" class="arrow_down"><img src="./images/arrow_down.png"></a>
+
+			<div class="tips"></div>
+
+			<div class="kidding"></div>
+			
 			<div class="navigatorSection" id="NS">
 				<div class = "left_list" id = "ll">
 					<section class="section">
@@ -161,8 +59,8 @@
 					    	<dd><a href="#12">看片追剧</a></dd>					      
 					        <dd><a href="#13">吉他</a></dd>
 					        <dd><a href="#14">音乐</a></dd>
-					        <dd><a href="#15">书法</a></dd>
-					        <dd><a href="#16">NBA</a></dd>
+					        <dd><a href="#15">NBA</a></dd>
+					        <dd><a href="#16">书法</a></dd>
 					        <dd><a href="#17">其他</a></dd>					        
 					    </dl>
 					    
@@ -321,29 +219,16 @@
 					<a name="1"><h1>Hacker</h1></a>
 
 					<code class="code1">
-						<a href="#" class="hacker" id="">漏洞</a>
-						<a href="#" class="hacker" id="">kali Linux</a>
-						<a href="#" class="hacker" id="">web渗透测试</a>
-						<a href="#" class="hacker" id="">国外hack站</a>
-						<a href="#" class="hacker" id="">国内hack站</a>
-						<a href="#" class="hacker" id="">社会工程学</a>
-						<a href="#" class="hacker" id="">路由器hack</a>
-						<a href="#" class="hacker" id="">信息搜集</a>
-						<a href="#" class="hacker" id="">hack新闻</a>
-						<a href="#" class="hacker" id="">免杀技术</a>
-						<a href="#" class="hacker" id="">密码</a>
-						<a href="#" class="hacker" id="">MD5免费破解解密加密</a>
-						<a href="#" class="hacker" id="">网络安全认证</a>
-						<a href="#" class="hacker" id="">无线攻击</a>
-						<a href="#" class="hacker" id="">匿名</a>
-						<a href="#" class="hacker" id="">代码注入</a>
-						<a href="#" class="hacker" id="">hack娱乐</a>
-						<a href="#" class="hacker" id="">Android攻击</a>
-						<a href="#" class="hacker" id="">BlackHat历届大会PPT</a>
-						<a href="#" class="hacker" id="">DDoS</a>
-						<a href="#" class="hacker" id="">逆向工程</a>
-						<a href="#" class="hacker" id="">hacktool</a>
-						<a href="#" class="hacker" id="">破解</a>
+						<a href="./pages/1_hacker/vulnerability.html" class="hacker" id="">漏洞</a>
+						<a href="./pages/1_hacker/kaliLinux.html" class="hacker" id="">kali Linux</a>
+						<a href="./pages/1_hacker/webPenetrationTest.html" class="hacker" id="">web渗透测试</a>
+						<a href="./pages/1_hacker/HackWebsite.html" class="hacker" id="">国内国外hack站</a>
+						<a href="./pages/1_hacker/socialEngineering.html" class="hacker" id="">社会工程学</a>		
+						<a href="./pages/1_hacker/informationGathering.html" class="hacker" id="">信息搜集</a>
+						<a href="./pages/1_hacker/wirelessAttack.html" class="hacker" id="">无线攻击</a>
+						<a href="./pages/1_hacker/androidAttack.html" class="hacker" id="">Android攻击</a>
+						<a href="./pages/1_hacker/reverseEngineering.html" class="hacker" id="">逆向工程</a>			
+						<a href="./pages/1_hacker/else.html" class="hacker" id="">其他</a>
 					</code>
 					
 				</div>
@@ -353,10 +238,11 @@
 					<a name="2"><h1>Geeker</h1></a>
 
 					<code class="code1">
-						<a href="#" class="Geeker" id="">Raspberry Pi</a>
-						<a href="#" class="Geeker" id="">Arduino</a>
-						<a href="#" class="Geeker" id="">PhysicalHacking</a>
-						<a href="#" class="Geeker" id="">Geeker相关</a>
+						<a href="./pages/2_geeker/geeker.html#links1" class="Geeker" id="">Raspberry Pi</a>
+						<a href="./pages/2_geeker/geeker.html#links2" class="Geeker" id="">Arduino</a>
+						<a href="./pages/2_geeker/geeker.html#links3" class="Geeker" id="">PhysicalHacking</a>
+						<a href="./pages/2_geeker/geeker.html#links4" class="Geeker" id="">Geeker相关</a>
+						<a href="./pages/2_geeker/geeker.html#links5" class="Geeker" id="">其他</a>
 					</code>
 
 				</div>
@@ -364,6 +250,12 @@
 				<div class="child" id="3">
 					
 					<a name="3"><h1>原创总结</h1></a>
+
+					<code class="code1">
+						
+						<a href="https://gist.github.com/MrTheWhiteHat/" class="OC" id="">一些经验总结</a>
+
+					</code>
 				
 				</div>
 
@@ -372,12 +264,12 @@
 					<a name="4"><h1>操作系统</h1></a>
 
 					<code class="code1">
-						<a href="#" class="OS" id="">Android</a>
-						<a href="#" class="OS" id="">windows</a>
-						<a href="#" class="OS" id="">Linux</a>
-						<a href="#" class="OS" id="">Unix</a>
-						<a href="#" class="OS" id="">ios</a>
-						<a href="#" class="OS" id="">osx</a>
+						<a href="./pages/4_operatingSystem/android.html" class="OS" id="">Android</a>
+						<a href="./pages/4_operatingSystem/windows.html" class="OS" id="">windows</a>
+						<a href="./pages/4_operatingSystem/Linux.html#links1" class="OS" id="">Linux</a>
+						<a href="./pages/4_operatingSystem/Linux.html#links4" class="OS" id="">Unix</a>
+						<a href="./pages/4_operatingSystem/Linux.html#links5" class="OS" id="">ios</a>
+						<a href="./pages/4_operatingSystem/Linux.html#links5" class="OS" id="">osx</a>
 						
 					</code>
 
@@ -388,36 +280,17 @@
 					<a name="5"><h1>编程开发</h1></a>
 
 					<code class="code1">
-						<a href="#" class="PD" id="">开源社区</a>
-						<a href="#" class="PD" id="">API</a>
-						<a href="#" class="PD" id="">JAVA</a>
-						<a href="#" class="PD" id="">web</a>
-						<a href="#" class="PD" id="">DataBase</a>
-						<a href="#" class="PD" id="">xml</a>
-						<a href="#" class="PD" id="">算法</a>
-						<a href="#" class="PD" id="">c++</a>
-						<a href="#" class="PD" id="">计算机基础</a>
-						<a href="#" class="PD" id="">系统架构框架</a>
-						<a href="#" class="PD" id="">云计算</a>
-						<a href="#" class="PD" id="">大数据+分布式</a>
-						<a href="#" class="PD" id="">VR虚拟现实</a>
-						<a href="#" class="PD" id="">汇编ASM</a>
-						<a href="#" class="PD" id="">C</a>
-						<a href="#" class="PD" id="">C#</a>
-						<a href="#" class="PD" id="">python</a>
-						<a href="#" class="PD" id="">php</a>
-						<a href="#" class="PD" id="">Ruby</a>
-						<a href="#" class="PD" id="">Perl</a>
-						<a href="#" class="PD" id="">Andriod</a>
-						<a href="#" class="PD" id="">正则表达式</a>
-						<a href="#" class="PD" id="">编码</a>
-						<a href="#" class="PD" id="">敲代码技巧</a>
-						<a href="#" class="PD" id="">GUI开发</a>
-						<a href="#" class="PD" id="">好文</a>
-						<a href="#" class="PD" id="">素材</a>
-						<a href="#" class="PD" id="">有关的编程网站</a>
-						<a href="#" class="PD" id="">代码搜索引擎</a>
-						<a href="#" class="PD" id="">搜索引擎</a>
+						<a href="./pages/5_programmingDevelopment/computerBase.html" class="PD" id="">计算机基础及正在发展的技术</a>
+						<a href="./pages/5_programmingDevelopment/openSource.html" class="PD" id="">开源社区</a>
+						<a href="./pages/5_programmingDevelopment/Java.html" class="PD" id="">JAVA</a>
+						<a href="./pages/5_programmingDevelopment/web.html" class="PD" id="">WEB</a>
+						<a href="./pages/5_programmingDevelopment/database.html" class="PD" id="">DataBase</a>
+						<a href="./pages/5_programmingDevelopment/xml.html" class="PD" id="">XML</a>
+						<a href="./pages/5_programmingDevelopment/C.html" class="PD" id="">C</a>
+						<a href="./pages/5_programmingDevelopment/cSharp.html" class="PD" id="">C++/C#</a>
+						<a href="./pages/5_programmingDevelopment/python.html" class="PD" id="">python</a>
+						<a href="./pages/5_programmingDevelopment/php.html" class="PD" id="">php</a>						
+						<a href="./pages/5_programmingDevelopment/else.html" class="PD" id="">其他</a>
 					</code>
 
 				</div>
@@ -427,13 +300,14 @@
 					<a name="6"><h1>电脑硬件</h1></a>
 
 					<code class="code1">
-						<a href="#" class="CP" id="">显示屏</a>
-						<a href="#" class="CP" id="">SSD</a>
-						<a href="#" class="CP" id="">鼠标</a>
-						<a href="#" class="CP" id="">键盘</a>
-						<a href="#" class="CP" id="">显卡</a>
-						<a href="#" class="CP" id="">CPU</a>
-						<a href="#" class="CP" id="">内存</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links1" class="CP" id="">显示屏</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links2" class="CP" id="">SSD</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links3" class="CP" id="">鼠标</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links4" class="CP" id="">键盘</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links5" class="CP" id="">显卡</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links6" class="CP" id="">CPU</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links7" class="CP" id="">内存</a>
+						<a href="./pages/6_computerHardware/computerHardware.html#links8" class="CP" id="">其他</a>
 					</code>
 
 				</div>
@@ -443,9 +317,10 @@
 					<a name="7"><h1>网络代理</h1></a>
 
 					<code class="code1">
-						<a href="#" class="NetProxy" id="">下载速度快的代理链接</a>
-						<a href="#" class="NetProxy" id="">youtube下载</a>
-						<a href="#" class="NetProxy" id="">翻墙</a>
+						<a href="./pages/7_networkAgent/networkAgent.html#links1" class="NetProxy" id="">下载速度快的代理链接</a>
+						<a href="./pages/7_networkAgent/networkAgent.html#links2" class="NetProxy" id="">youtube下载</a>
+						<a href="./pages/7_networkAgent/networkAgent.html#links3" class="NetProxy" id="">翻墙</a>
+						<a href="./pages/7_networkAgent/networkAgent.html#links4" class="NetProxy" id="">其他</a>
 					</code>
 
 				</div>
@@ -455,11 +330,12 @@
 					<a name="8"><h1>安全运维</h1></a>
 
 					<code class="code1">
-						<a href="#" class="Security" id="">关于运维工程师</a>
-						<a href="#" class="Security" id="">安全学习资料</a>
-						<a href="#" class="Security" id="">各大互联网企业的网络安全应急中心</a>
-						<a href="#" class="Security" id="">各大互联网有关安全的招聘公告</a>
-						<a href="#" class="Security" id="">安全漏洞评分标准</a>
+						<a href="./pages/8_securityOperation/securityOperation.html#links1" class="Security" id="">关于运维工程师</a>
+						<a href="./pages/8_securityOperation/securityOperation.html#links2" class="Security" id="">安全学习资料</a>
+						<a href="./pages/8_securityOperation/securityOperation.html#links3" class="Security" id="">各大互联网企业的网络安全应急中心</a>
+						<a href="./pages/8_securityOperation/securityOperation.html#links4" class="Security" id="">各大互联网有关安全的招聘公告</a>
+						<a href="./pages/8_securityOperation/securityOperation.html#links5" class="Security" id="">安全漏洞评分标准</a>
+						<a href="./pages/8_securityOperation/securityOperation.html#links6" class="Security" id="">其他</a>
 					</code>
 
 				</div>
@@ -469,8 +345,9 @@
 					<a name="9"><h1>Google</h1></a>
 
 					<code class="code1">
-						<a href="#" class="google" id="">Google-Hacking</a>
-						<a href="#" class="google" id="">Google服务</a>
+						<a href="./pages/9_google/google.html#links1" class="google" id="">Google-Hacking</a>
+						<a href="./pages/9_google/google.html#links2" class="google" id="">Google服务</a>
+						<a href="./pages/9_google/google.html#links3" class="google" id="">其他</a>
 					</code>
 
 				</div>
@@ -480,10 +357,10 @@
 					<a name="10"><h1>大学相关</h1></a>
 
 					<code class="code1">
-						<a href="#" class="CL" id="">大学课程相关</a>
-						<a href="#" class="CL" id="">教师资格证</a>
-						<a href="#" class="CL" id="">办公软件</a>
-						<a href="#" class="CL" id="">信息搜集</a>
+						<a href="./pages/10_aboutUniversity/aboutUniversity.html#links1" class="CL" id="">大学课程相关</a>
+						<a href="./pages/10_aboutUniversity/aboutUniversity.html#links2" class="CL" id="">教师资格证</a>
+						<a href="./pages/10_aboutUniversity/aboutUniversity.html#links3" class="CL" id="">办公软件</a>
+						<a href="./pages/10_aboutUniversity/aboutUniversity.html#links4" class="CL" id="">其他</a>
 					</code>
 
 				</div>
@@ -493,11 +370,13 @@
 					<a name="11"><h1>工作相关</h1></a>
 
 					<code class="code1">
-						<a href="#" class="WK" id="">各大企业校招入口</a>
-						<a href="#" class="WK" id="">在线笔试题</a>
-						<a href="#" class="WK" id="">前人经验</a>
-						<a href="#" class="WK" id="">找实习</a>
-						<a href="#" class="WK" id="">能力要求</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links1" class="WK" id="">各大企业校招入口</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links2" class="WK" id="">在线笔试题</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links3" class="WK" id="">前人经验</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links4" class="WK" id="">找实习</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links5" class="WK" id="">能力要求</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links6" class="WK" id="">简历制作</a>
+						<a href="./pages/11_aboutJob/aboutJob.html#links7" class="WK" id="">其他</a>
 					</code>
 
 				</div>
@@ -600,279 +479,8 @@
 				</div>				
 			</div>
 
-			<!--svg元素： 定义SVG文档片断-->
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://	www.w3.org/XML/1998/namespace" class="svg-defs">
-	  			<!--defs元素： 被引用元素的容器-->
-	  			<defs>
-
-				    <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
-				      	<image xlink:href="./images/butterflies.png" width="100" height="100"      
-				      	    preserveAspectRatio="none">			      		
-				      	</image>
-				    </pattern>
-
-				    <!--g元素: 用于把相关元素进行组合的容器元素-->
-		    		<g id="shape-butterfly-1">
-		    			<!--path元素: 定义路径-->
-						<path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
-						c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
-						l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
-						c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
-						c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
-						c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
-						c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
-						c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
-						c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
-						c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
-						c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
-						c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
-						c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
-						c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
-						c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
-						c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
-						c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
-						c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
-						c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
-						c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
-						c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
-						c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
-						C4.417,4.25,6.483,3.317,8.65,2.85z"/>
-		    		<g>
-	  			</defs>
-			</svg>
-
-			<section class="scene3d">
-
-				<div class="butterfly_container">
-					<var class="rotate3d">
-						<var class="scale">
-							<var class="translate3d">
-								<var class="translate3d-1">
-									<figure class="butterfly">
-								        <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
-								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								      	<svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
-								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-								      	</svg> 
-									</figure>
-								</var>
-							</var>
-						</var>
-					</var>
-				</div>
-
-				<div class="butterfly_container" 
-				   style="margin-top: -150px; margin-left: 140px;
-				          -webkit-animation-duration: 5s;
-				          -moz-animation-duration: 5s;
-				          -ms-animation-duration: 5s;
-				          -o-animation-duration: 5s;
-				          animation-duration: 5s;">
-					<var class="rotate3d">
-						<var class="scale">
-							<var class="translate3d">
-								<var class="translate3d-1">
-									<figure class="butterfly">
-										<svg class="wing left" viewBox="0 0 50 100"
-											style="-webkit-animation-duration: .75s;
-											-moz-animation-duration: .75s;
-											-ms-animation-duration: .75s;
-											-o-animation-duration: .75s;
-											animation-duration: .75s;">
-											<use class="left" xlink:href="#shape-butterfly-1"></use>
-										</svg> 
-										<svg class="wing right" viewBox="0 0 50 100"
-											style="-webkit-animation-duration: .75s;
-											-moz-animation-duration: .75s;
-											-ms-animation-duration: .75s;
-											-o-animation-duration: .75s;
-											animation-duration: .75s;">
-											<use class="left" xlink:href="#shape-butterfly-1"></use>
-										</svg> 
-										</figure>
-								</var>
-					        </var>
-						</var>
-					</var>
-				</div>
-
-				<div class="butterfly_container scale_half" 
-				   style="margin-top: -10px; margin-left: 50px;
-				          -webkit-animation-duration: 5s;
-				          -moz-animation-duration: 5s;
-				          -ms-animation-duration: 5s;
-				          -o-animation-duration: 5s;
-				          animation-duration: 5s;">
-					<var class="rotate3d">
-					    <var class="scale">
-						    <var class="translate3d">
-							    <var class="translate3d-1">
-								    <figure class="butterfly">
-								        <svg class="wing left" viewBox="0 0 50 100"
-								            style="-webkit-animation-duration: .75s;
-								                    -moz-animation-duration: .75s;
-								                    -ms-animation-duration: .75s;
-								                    -o-animation-duration: .75s;
-								                    animation-duration: .75s;">
-								            <use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								        <svg class="wing right" viewBox="0 0 50 100"
-								            style="-webkit-animation-duration: .75s;
-								                    -moz-animation-duration: .75s;
-								                    -ms-animation-duration: .75s;
-								                    -o-animation-duration: .75s;
-								                    animation-duration: .75s;">
-								            <use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								    </figure>
-							    </var>
-						    </var>
-					    </var>
-					</var>
-				</div>
-
-				<div class="butterfly_container scale_half" 
-				    style="margin-top: 20px;
-				        -webkit-animation-duration: 20s;
-				        -moz-animation-duration: 20s;
-				        -ms-animation-duration: 20s;
-				        -o-animation-duration: 20s;
-				        animation-duration: 20s;">
-					<var class="rotate3d">
-						<var class="scale">
-							<var class="translate3d">
-								<var class="translate3d-1">
-									<figure class="butterfly">
-									    <svg class="wing left" viewBox="0 0 50 100"
-									        style="-webkit-animation-duration: 1s;
-									            -moz-animation-duration: 1s;
-									            -ms-animation-duration: 1s;
-									            -o-animation-duration: 1s;
-									            animation-duration: 1s;">
-									        <use class="left" xlink:href="#shape-butterfly-1"></use>
-									    </svg> 
-									    <svg class="wing right" viewBox="0 0 50 100"
-									        style="-webkit-animation-duration: 1s;
-									            -moz-animation-duration: 1s;
-									            -ms-animation-duration: 1s;
-									            -o-animation-duration: 1s;
-									            animation-duration: 1s;">
-									        <use class="left" xlink:href="#shape-butterfly-1"></use>
-									    </svg> 
-									</figure>
-								</var>
-							</var>
-						</var>
-					</var>
-				</div>
-
-				<div class="butterfly_container scale_half" 
-				   style="margin-top: 100px; margin-left: 50px;
-				        -webkit-animation-duration: 20s;
-				        -moz-animation-duration: 20s;
-				        -ms-animation-duration: 20s;
-				        -o-animation-duration: 20s;
-				        animation-duration: 20s;">
-					<var class="rotate3d">
-					    <var class="scale">
-						    <var class="translate3d">
-							    <var class="translate3d-1">
-								    <figure class="butterfly">
-								      	<svg class="wing left" viewBox="0 0 50 100"
-								           	style="-webkit-animation-duration: 1.2s;
-								                -moz-animation-duration: 1.2s;
-								                -ms-animation-duration: 1.2s;
-								                -o-animation-duration: 1.2s;
-								                animation-duration: 1.2s;">
-								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-								      	</svg> 
-								      	<svg class="wing right" viewBox="0 0 50 100"
-								           	style="-webkit-animation-duration: 1.2s;
-								                -moz-animation-duration: 1.2s;
-								                -ms-animation-duration: 1.2s;
-								                -o-animation-duration: 1.2s;
-								                animation-duration: 1.2s;">
-								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-								      	</svg> 
-								    </figure>
-							    </var>
-						    </var>
-					    </var>
-					</var>
-				</div>
-
-				<div class="butterfly_container scale_third" 
-				    style="margin-top: 150px;
-				        -webkit-animation-duration: 20s;
-				        -moz-animation-duration: 20s;
-				        -ms-animation-duration: 20s;
-				        -o-animation-duration: 20s;
-				        animation-duration: 20s;">
-					<var class="rotate3d">
-					    <var class="scale">
-						    <var class="translate3d">
-							    <var class="translate3d-1">
-								    <figure class="butterfly">
-								        <svg class="wing left" viewBox="0 0 50 100"
-								            style="-webkit-animation-duration: .35s;
-								                -moz-animation-duration: .35s;
-								                -ms-animation-duration: .35s;
-								                -o-animation-duration: .35s;
-								                animation-duration: .35s;">
-								            <use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								        <svg class="wing right" viewBox="0 0 50 100"
-								            style="-webkit-animation-duration: .35s;
-								                -moz-animation-duration: .35s;
-								                -ms-animation-duration: .53s;
-								                -o-animation-duration: .35s;
-								                animation-duration: .35s;">
-								            <use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								    </figure>
-							    </var>
-						    </var>
-					    </var>
-					</var>
-				</div>
-
-				<div class="butterfly_container scale_third" 
-				    style="margin-top: -250px; margin-left: 300px; 
-				        -webkit-animation-duration: 4s;
-				        -moz-animation-duration: 4s;
-				        -ms-animation-duration: 4s;
-				        -o-animation-duration: 4s;
-				        animation-duration: 4s;">
-					<var class="rotate3d">
-					    <var class="scale">
-						    <var class="translate3d">
-							    <var class="translate3d-1">
-								    <figure class="butterfly">
-								      	<svg class="wing left" viewBox="0 0 50 100"
-								            style="-webkit-animation-duration: .45s;
-								                -moz-animation-duration: .45s;
-								                -ms-animation-duration: .45s;
-								                -o-animation-duration: .45s;
-								                animation-duration: .45s;">
-								        	<use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								        <svg class="wing right" viewBox="0 0 50 100"
-								           	style="-webkit-animation-duration: .45s;
-								                -moz-animation-duration: .45s;
-								                -ms-animation-duration: .45s;
-								                -o-animation-duration: .45s;
-								                animation-duration: .45s;">
-								            <use class="left" xlink:href="#shape-butterfly-1"></use>
-								        </svg> 
-								    </figure>
-							    </var>
-						    </var>
-					    </var>
-					</var>
-				</div>
-			</section>
-			
+			<iframe src="./butterflies.html" marginWidth=0 marginHeight=0 frameBorder=0 width="100%" height="100%" scrolling=no>				
+			</iframe>
 
 			<div class="bottom_link">
 				<ul>
@@ -958,16 +566,12 @@
 	        <hr style="background-color: #fff;  border: 1px dashed;">
 	        
 	        <div class="menuitems">
-	            <a href="http://s.weibo.com/user/mrthewhitehat&Refer=weibo_user" target="_bland">新浪微博</a>
+	            <a href="http://s.weibo.com/user/不会唱歌不会写代码&Refer=weibo_user" target="_bland">新浪微博</a>
 	        </div>
 	        <div class="menuitems">
 	            <a href="https://github.com/MrTheWhiteHat" target="_blank">Github</a>
 	        </div>
 	    </div>
-
-		<script type="text/javascript">
-			
-		</script>
 
 		<!--js脚本的位置特别重要，有的js需要文档加载完了之后，再加载js,才不会出错。这个3d的菜单就是得先加载完文档才有效果。搞了好久......-->
 		

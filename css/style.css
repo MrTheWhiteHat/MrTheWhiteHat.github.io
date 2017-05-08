@@ -32,10 +32,6 @@ html, body {
 	overflow: hidden;
 }
 
-* {
-	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-}
-
 .header
 {
 	position:fixed;
@@ -44,7 +40,6 @@ html, body {
 	left:0px;
 	z-index:99;	
 }
-
 
 .container {
     width: 100%;
@@ -118,7 +113,7 @@ html, body {
 	}	
 }
 
-a {
+.wrap a {
 	text-decoration: none;
 	float: left;
 	text-align: center;
@@ -331,4 +326,38 @@ a {
 	100% {
 	transform: rotate(0);
 	}
+}
+
+/*右键点击功能皮肤*/
+.skin {
+    width : 200px;
+    height: 300px;
+    border : 3px solid green;
+    padding : 2px;
+    visibility : hidden;
+    position : absolute;
+    box-shadow: -10px 10px 10px #00ff00;
+    color: #0000ff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+hr {
+
+	color:#0000ff ;
+}
+
+div.menuitems {
+    margin : 1px 0;
+}
+div.menuitems a {
+	line-height: 35px;
+    text-decoration : none;
+    color: #ffffff;
+    font-size: 20px;
+}
+div.menuitems:hover {
+    text-indent: 12px;
+    background-color : rgba(0, 255, 255, 0.9);
 }
