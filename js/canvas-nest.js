@@ -28,8 +28,8 @@
   }
   //设置canvas的高宽
   function set_canvas_size() {
-    canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, 
-    canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    canvas_width = the_canvas.width = document.body.clientWidth, 
+    canvas_height = the_canvas.height = document.body.clientHeight;
   }
 
   //绘制过程
@@ -89,8 +89,8 @@
   //当时鼠标位置存储，离开的时候，释放当前位置信息
   window.onmousemove = function(e) {
     e = e || window.event;
-    current_point.x = e.clientX;
-    current_point.y = e.clientY;
+    current_point.x = e.clientX; // 获取鼠标的横坐标
+    current_point.y = e.clientY; // 获取鼠标的纵坐标
   }, window.onmouseout = function() {
     current_point.x = null;
     current_point.y = null;
