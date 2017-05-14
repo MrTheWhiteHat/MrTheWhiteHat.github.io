@@ -89,4 +89,4 @@
 	//str = arr.join(","); // 将数组转化成字符串			  				
 	setCookie("counter", visits, now)
 	document.write("您的IP为<i>  " + returnCitySN['cip'] + "</i>    来自<i>" + returnCitySN['cname'] + "</i>");
-	document.write("<br> 您第<i>" + visits + "</i>次访问本页面！") 
+	document.write("<br> 您第<i>" + visits + "</i>次访问本站！") 
